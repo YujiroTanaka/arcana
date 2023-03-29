@@ -2109,7 +2109,7 @@ blockquote {
 
 /* Landscape mobile & down
 ===============================*/
-@media (max-width: 400px) {
+@media (max-width: 350px) {
 
     #wrapper {
         margin:0;
@@ -2202,7 +2202,7 @@ blockquote {
 
 /* Mobile to Tablet Portrait
 ===============================*/
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 350px) and (max-width: 767px) {
 
     #wrapper {
         margin:0;
