@@ -33,7 +33,7 @@ class ContactMail extends Mailable
     public function build()
     {
         return $this->subject('ホームページからのお問い合わせ')
-        ->to('selfportraityu@gmail.com')
+        ->to('info@goodbase.jp')
         ->text('mail.contact')
         ->with([
             'type' => $this->type,
