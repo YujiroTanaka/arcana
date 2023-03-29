@@ -587,3 +587,13 @@ sup {
     filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
     opacity: 0.7;
   }
+
+  .contact-success {
+    width: 100%;
+    background-color: green;
+    color: #fff;
+    font-size: 18px;
+    padding: 18px 0 13px;
+    margin: 0;
+    text-align: center;
+  }
