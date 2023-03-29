@@ -2133,6 +2133,7 @@ blockquote {
         padding-left: 0;
     }
 
+
     /*-----------------Header Elements-----------------*/
     #header .row {
         padding: 0 15px !important;
@@ -2225,6 +2226,11 @@ blockquote {
     .col-3, .col-4, .col-6, .col-8, .col-10, .col-12 {
         width: 50%;
     }
+
+    #youtube .col-4 {
+        width: 100%;
+    }
+
 
     /*-----------------Header Elements-----------------*/
     #header .row {
