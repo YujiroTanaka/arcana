@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'IndexController@index')->name('index');
+Route::get('dummy', 'IndexController@index')->name('index');
 Route::post('/', 'IndexController@contact');
