@@ -97,6 +97,17 @@
                 <div class="section-heading">
                     <h2 class="section-title">NEW ARRIVAL</h2>
                 </div>
+                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="pricing-block-content">
+                        <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
+                        <div class="pricing">
+                            <img src="/images/item1.jpg" alt="item1"/>
+                        </div>
+                        <ul>
+                            <li>¥5500</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="pricing-block-content">
                         <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
@@ -130,7 +141,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="pricing-block-content">
                         <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
                         <div class="pricing">
@@ -141,7 +152,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.6s">
+                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="pricing-block-content">
                         <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
                         <div class="pricing">
@@ -152,7 +163,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="pricing-block-content">
                         <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
                         <div class="pricing">
@@ -163,7 +174,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="pricing-block-content">
                         <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
                         <div class="pricing">
@@ -174,7 +185,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.9s">
+                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="pricing-block-content">
                         <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
                         <div class="pricing">
@@ -185,18 +196,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="1.0s">
-                    <div class="pricing-block-content">
-                        <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
-                        <div class="pricing">
-                            <img src="/images/item1.jpg" alt="item1"/>
-                        </div>
-                        <ul>
-                            <li>¥5500</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="1.1s">
+                <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="pricing-block-content">
                         <h3>FINGERHUT FASHIONS Bore Lunch Jacket</h3>
                         <div class="pricing">
