@@ -71,7 +71,7 @@
                             <li><a href="#newarrival">NEW ARRIVAL</a></li>
                             <li><a href="#about">ABOUT</a></li>
                             <li><a href="#youtube">YOUTUBE</a></li>
-                            <li><a href="#testimonials">CONTACT</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
                         </ul>
                     </nav>
                     <div id="nav-trigger"><span></span></div>

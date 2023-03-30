@@ -1590,7 +1590,6 @@ blockquote {
     left: 50%; /* centers the loading animation horizontally one the screen */
     top: 50%; /* centers the loading animation vertically one the screen */
     background-position: center;
-    margin: -55px 0 0 -55px; /* is width and height divided by two */
     text-align: center;
 }
 
