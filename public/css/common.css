@@ -157,6 +157,9 @@ a:hover, #header.nav-solid nav a:hover {
   .text-center .section-heading h2:after {
     margin: 30px auto 0 auto;
   }
+  .button {
+    margin: 10px 0 35px 0;
+  }
 }
 
 

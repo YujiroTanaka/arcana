@@ -271,9 +271,6 @@
                             オリジナルアイテムではVINTAGE FABRICやUSEDアイテムを使用しており他にはないデザインや風合いのアイテムを楽しんで頂けます。
                         </p>
                     </div>
-                    <a href="#" data-videoid="UYJ5IjBRlW8" data-videosite="youtube" class="button video link-lightbox">
-                        EC SITE</i>
-                    </a>
                 </div>
                 <div class="col-2 wow fadeInUp" data-wow-delay="0.6s">
                     <img src="/images/the-end.jpg" alt="Dancer"/>
@@ -325,7 +322,7 @@
             </div>
         </aside>
 
-        <section id="contact" class="scrollto text-center" data-enllax-ratio=".2">
+        <section id="contact" class="secondary-color scrollto text-center" data-enllax-ratio=".2">
             <div class="row clearfix wow fadeIn" data-wow-delay="0.3s">
                 <div class="section-heading">
                     <h2 class="section-title">Contact</h2>
