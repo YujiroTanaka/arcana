@@ -300,22 +300,12 @@
                 <div class="section-heading">
                     <h2 class="section-title">YouTube</h2>
                 </div>
-                <blockquote class="col-4 testimonial classic wow fadeIn" data-wow-delay="0.1s">
-                    <iframe src="https://www.youtube.com/embed/Ig8Y53y_Zb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <q>【革ジャン】サイズ42から36に大幅サイズダウンリペア出来上がりました!!お客様にお渡しさせて頂きましたので一部始終お送り致します!!感動とドキドキをありがとうございました!!</q>
-                </blockquote>
-                <blockquote class="col-4 testimonial classic wow fadeIn" data-wow-delay="0.2s">
-                    <iframe src="https://www.youtube.com/embed/14B58oAXtYw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <q>【セール】店内改装のため、店内商品をさらにお求めやすい価格にしております！イベントで使用したフロアをARCANAブースに改装するために店内にある古着を半分にするため特価にてご提供致します。</q>
-                </blockquote>
-                <blockquote class="col-4 testimonial classic wow fadeIn" data-wow-delay="0.3s">
-                    <iframe src="https://www.youtube.com/embed/yjwomGFV8vE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <q>【革ジャンオーダー】バブア？違う違う!!Abyspey!!本日お客様にお渡しさせて頂きました。 #ARCANA</q>
-                </blockquote>
-                <blockquote class="col-4 testimonial classic wow fadeIn" data-wow-delay="0.4s">
-                    <iframe src="https://www.youtube.com/embed/KU7i1eOOOSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <q>【ダイジェスト版】大阪から東京へ 玉造の古着屋が東京へ進出しました</q>
-                </blockquote>
+                @foreach($snippets as $key => $movie)
+                    <blockquote class="col-4 testimonial classic wow fadeIn" data-wow-delay="{{($key + 1) / 10}}s">
+                        <iframe src="https://www.youtube.com/embed/{{ $movie->videoId }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <q>{{ $movie->title }}</q>
+                    </blockquote>
+                @endforeach
                 <a href="https://www.youtube.com/@THE_END" class="button" target="_blank">
                     More</i>
                 </a>    
@@ -334,6 +324,8 @@
                         <th>ご用件</th>
                         <td><select name="type" required>
                             <option value="">選択してください</option>
+                            <option value="リペア">リペア</option>
+                            <option value="リメイク">リメイク</option>
                             <option value="オーダー">オーダー</option>
                             <option value="その他">その他</option>
                           </select></td>

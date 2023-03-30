@@ -381,7 +381,7 @@ section {
 .button {
     font-size: 16px;
     margin: 0 0 60px 0;
-    padding: 6px 50px;
+    padding: 6px 100px;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     transition: all .3s linear;
@@ -2126,7 +2126,7 @@ blockquote {
     }
 
     .page-border, #scrollUp, #scrollUp:before {
-        display:none;
+        display:none !important;
     }
 
     .row {
@@ -2169,6 +2169,10 @@ blockquote {
 
     #banner-content.row {
         padding-top: 85px !important;
+    }
+
+    #banner-logo {
+        display:none;
     }
 
     /*-----------------Sections-----------------*/
@@ -2220,7 +2224,7 @@ blockquote {
     }
 
     .page-border, #scrollUp, #scrollUp:before {
-        display:none;
+        display:none !important;
     }
 
 
@@ -2238,6 +2242,10 @@ blockquote {
 
     #youtube .col-4 {
         width: 100%;
+    }
+
+    #banner-logo {
+        display:none;
     }
 
 
