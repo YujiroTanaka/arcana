@@ -145,6 +145,12 @@ a:hover, #header.nav-solid nav a:hover {
   #header .social-icons {
     display: none;
   }
+  .pricing-block h3 {
+    font-size:12px;
+  }
+  .pricing-block li {
+    font-size: 15px;
+  }
 }
 
 

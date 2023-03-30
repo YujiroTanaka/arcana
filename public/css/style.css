@@ -1460,7 +1460,12 @@ blockquote {
 .pricing-block h3 {
     font-size:17px;
     text-transform:uppercase;
-    padding-bottom:10px;
+    padding-bottom:0;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .pricing-sub {
