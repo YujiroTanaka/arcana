@@ -154,6 +154,9 @@ a:hover, #header.nav-solid nav a:hover {
   .pricing-block li {
     font-size: 15px;
   }
+  .text-center .section-heading h2:after {
+    margin: 30px auto 0 auto;
+  }
 }
 
 
