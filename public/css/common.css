@@ -142,6 +142,9 @@ a:hover, #header.nav-solid nav a:hover {
     width: 100%;
     height: auto;
   }
+  #header .social-icons {
+    display: none;
+  }
 }
 
 
