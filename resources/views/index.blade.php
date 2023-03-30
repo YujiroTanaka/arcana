@@ -98,7 +98,7 @@
                     <h2 class="section-title">NEW ARRIVAL</h2>
                 </div>
                 <a href="https://theend0304.base.shop/items/71735002">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>OLD COACH Shoulder Bag [NO.422-3961]</h3>
                             <div class="pricing">
@@ -111,7 +111,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71734791">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>OLD COACH Shoulder Bag [No.0254-909]</h3>
                             <div class="pricing">
@@ -124,7 +124,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71734666">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>OLD COACH Drawstring Bag [5FM-4931]</h3>
                             <div class="pricing">
@@ -137,7 +137,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71734434">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>Burberry's Drawstring Bag</h3>
                             <div class="pricing">
@@ -150,7 +150,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71734297">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>POLO RALPH LAUREN Pochette Shoulder Bag</h3>
                             <div class="pricing">
@@ -163,7 +163,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71734176">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>POLO RALPH LAUREN Drawstring Bag</h3>
                             <div class="pricing">
@@ -176,7 +176,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71555898">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>U.S.NAVY NAVY DEPARTMENT Overall</h3>
                             <div class="pricing">
@@ -189,7 +189,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71554385">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>Romanian Army Wool Tapered Pants</h3>
                             <div class="pricing">
@@ -202,7 +202,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71545783">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>80's U.S.ARMY SO-SEW STYLES inc M-65 JKT</h3>
                             <div class="pricing">
@@ -215,7 +215,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71532696">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>German Army Military Coat ［with liner］</h3>
                             <div class="pricing">
@@ -228,7 +228,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71532447">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>Russian Army Officer Parade Coat［cold war era］</h3>
                             <div class="pricing">
@@ -241,7 +241,7 @@
                     </div>
                 </a>
                 <a href="https://theend0304.base.shop/items/71532172">
-                    <div class="pricing-block col-4 wow fadeIn" data-wow-delay="0s">
+                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0s">
                         <div class="pricing-block-content">
                             <h3>50's French Army Wool Coat</h3>
                             <div class="pricing">
