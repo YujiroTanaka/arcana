@@ -48,7 +48,7 @@ class AdminInformationSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('admin_informations')->insert([
-            'information_date' => '2023-04-04 00:00:00',
+            'information_date' => '2023-04-04 18:00:00',
             'detail' => '管理画面サイト変更履歴表示(ダッシュボード)',
             'status' => 1,
             'created_at' => date('Y-m-d H:i:s'),
