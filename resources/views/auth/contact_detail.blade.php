@@ -15,10 +15,10 @@
               <h3 class="card-title">{{ $contact->type }}のお問い合わせ</h3>
 
               <div class="card-tools">
-                @if($status != 1)
+                @if($contact->id != $max)
                   <a href="{{ $contact->id + 1 }}" class="btn btn-tool" title="Previous"><i class="fas fa-chevron-left"></i></a>
                 @endif
-                @if($status != 2)
+                @if($contact->id != $min)
                   <a href="{{ $contact->id - 1 }}" class="btn btn-tool" title="Next"><i class="fas fa-chevron-right"></i></a>
                 @endif
               </div>

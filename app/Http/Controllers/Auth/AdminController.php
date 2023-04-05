@@ -44,14 +44,7 @@ class AdminController extends Controller
     {
         $contact = Contact::find($id);
         $max = Contact::max('id');
-        $min = Contact::min('id');
-        if ($id == $max) {
-            $status = 1;
-        } elseif ($id == $min) {
-            $status = 2;
-        } else {
-            $status = 0;
-        }
-        return view('auth.contact_detail', compact('contact', 'status'));
+        $min = 1;
+        return view('auth.contact_detail', compact('contact', 'max', 'min'));
     }
 }
