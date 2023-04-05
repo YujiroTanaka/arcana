@@ -48,7 +48,7 @@ class AdminInformationSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('admin_informations')->insert([
-            'information_date' => '2023-04-05 00:00:00',
+            'information_date' => '2023-04-04 00:00:00',
             'detail' => '管理画面サイト変更履歴表示(ダッシュボード)',
             'status' => 1,
             'created_at' => date('Y-m-d H:i:s'),
@@ -62,15 +62,22 @@ class AdminInformationSeeder extends Seeder
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('admin_informations')->insert([
-            'information_date' => null,
+            'information_date' => '2023-04-05 00:00:00',
             'detail' => '管理画面お問い合わせ表示',
-            'status' => 0,
+            'status' => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
         DB::table('admin_informations')->insert([
             'information_date' => null,
             'detail' => 'フロントトップにシリーズバナー表示',
+            'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
+        DB::table('admin_informations')->insert([
+            'information_date' => '2023-04-05 00:00:00',
+            'detail' => '管理画面サイト変更履歴管理(開発者のみ)',
             'status' => 0,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
