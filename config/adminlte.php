@@ -298,6 +298,11 @@ return [
 
         // Sidebar items:
         [
+            'text' => 'トップ',
+            'url'  => 'admin',
+            'icon' => 'fas fa-fw fa-th',
+        ],
+        [
             'text' => 'ブログ',
             'url'  => 'admin/blog',
             'icon' => 'fas fa-fw fa-pen',
