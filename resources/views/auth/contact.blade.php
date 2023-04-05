@@ -13,10 +13,6 @@
           <div class="card">
             <div class="card-header bg-secondary">
               <h3 class="card-title">お問い合わせ</h3>
-
-              <div class="card-tools">
-                </div>
-              </div>
             </div>
             <!-- /.card-header -->
             <div class="card-body table-responsive p-0">
