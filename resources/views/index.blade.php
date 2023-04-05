@@ -336,11 +336,11 @@
                       </tr>
                       <tr>
                         <th>電話番号（半角）</th>
-                        <td><input size="30" type="text" class="wide" name="phone" /></td>
+                        <td><input size="30" type="tel" pattern="\d{2,4}-?\d{2,4}-?\d{3,4}" class="wide" name="phone" /></td>
                       </tr>
                       <tr>
                         <th>メールアドレス<span>必須</span></th>
-                        <td><input size="30" type="text" class="wide" name="email" required /></td>
+                        <td><input size="30" type="email" class="wide" name="email" required /></td>
                       </tr>
                       <tr>
                         <th>お問い合わせ内容<span>必須</span></th>

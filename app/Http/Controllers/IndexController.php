@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
+use App\Models\Contact;
 use Google_Client;
 use Google_Service_YouTube;
 
@@ -35,6 +36,13 @@ class IndexController extends Controller
 
     public function contact(Request $request)
     {
+        Contact::create([
+            'type' => $request->type,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'msg' => $request->msg,
+        ]);
         Mail::send(new ContactMail($request->type, $request->name, $request->email, $request->phone, $request->msg));
         $contact = true;
         return redirect()->route('index')->with(compact('contact'));
