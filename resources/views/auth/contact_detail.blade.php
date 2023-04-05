@@ -26,12 +26,12 @@
             <!-- /.card-header -->
             <div class="card-body p-0">
               <div class="mailbox-read-info">
-                <h5 style="margin-bottom:5px">{{ $contact->name }} 様</h5>
-                <h6>{{ $contact->email }}
+                <h5 style="margin-bottom:5px"><i class="fas fa-fw fa-user mr-1 mb-3"></i>{{ $contact->name }} 様</h5>
+                <h6><i class="fas fa-fw fa-envelope mr-1 mb-2"></i>{{ $contact->email }}
                   <span class="mailbox-read-time float-right">{{ $contact->created_at }}</span>
                 </h6>
                 @if($contact->phone)
-                  <h6>{{ $contact->phone }}</h6>
+                  <h6><i class="fas fa-fw fa-phone mr-1"></i>{{ $contact->phone }}</h6>
                 @endif
               </div>
               <div class="mailbox-read-message">
