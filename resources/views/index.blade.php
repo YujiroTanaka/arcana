@@ -68,8 +68,9 @@
                     <nav id="nav-main">
                         <ul>
                             <li><a href="#banner">TOP</a></li>
-                            <li><a href="#newarrival">NEW ARRIVAL</a></li>
+                            <li><a href="#series-banner">ORIGINAL ITEM</a></li>
                             <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#newarrival">NEW ARRIVAL</a></li>
                             <li><a href="#youtube">YOUTUBE</a></li>
                             <li><a href="#contact">CONTACT</a></li>
                         </ul>
@@ -91,6 +92,45 @@
     </header>
 
     <main id="content">
+        <section id="series-banner" class="text-center scrollto clearfix ">
+            <div class="section-heading">
+                <h2 class="section-title">ORIGINAL ITEM</h2>
+            </div>
+            <div class="flexbox">
+                <div class="box1">
+                    <a href="https://theend0304.base.shop/items/71459134" class="wow fadeIn"
+                    data-wow-delay="0.2s"><img src="/images/gallery-images/gallery-image-5.jpg" alt="Landing Page"/></a>
+                 </div>
+                <div class="box2">
+                    <a href="https://theend0304.base.shop/items/69282819" class="wow fadeIn"data-wow-delay="0.1s">
+                        <img src="/images/gallery-images/gallery-image-4.jpg" alt="Landing Page"/>
+                    </a>
+                 </div>
+                <div class="box3">
+                    <a href="https://theend0304.base.shop/items/69179826" class="wow fadeIn"
+                    data-wow-delay="0.3s"><img src="/images/gallery-images/gallery-image-6.jpg" alt="Landing Page"/></a>
+                 </div>
+            </div>
+        </section>
+
+        <div id="about" class="secondary-color scrollto clearfix">
+            <div class="row no-padding-bottom clearfix">
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="section-heading">
+                        <h2 class="section-title">ABOUT</h2>
+                        <p class="section-subtitle">
+                            《ここだから出会える一着》をコンセプトにしたお店です。<br>
+                            デザインやディティール、素材など面白い古着とVINTAGE、リペアやカスタ厶を施したアイテムなどを取り揃えております。<br> 
+                            併設してるアトリエにてオリジナルアイテムやリメイクアイテム製作しております。<br>
+                            オリジナルアイテムではVINTAGE FABRICやUSEDアイテムを使用しており他にはないデザインや風合いのアイテムを楽しんで頂けます。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-2 wow fadeInUp" data-wow-delay="0.6s">
+                    <img src="/images/the-end.jpg" alt="Dancer"/>
+                </div>
+            </div>    
+        </div>
 
         <section id="newarrival" class="text-center scrollto clearfix ">
             <div class="row clearfix">
@@ -259,43 +299,7 @@
             </a>
         </section>
 
-        <div id="about" class="secondary-color scrollto clearfix">
-            <div class="row no-padding-bottom clearfix">
-                <div class="col-2 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="section-heading">
-                        <h2 class="section-title">ABOUT</h2>
-                        <p class="section-subtitle">
-                            《ここだから出会える一着》をコンセプトにしたお店です。<br>
-                            デザインやディティール、素材など面白い古着とVINTAGE、リペアやカスタ厶を施したアイテムなどを取り揃えております。<br> 
-                            併設してるアトリエにてオリジナルアイテムやリメイクアイテム製作しております。<br>
-                            オリジナルアイテムではVINTAGE FABRICやUSEDアイテムを使用しており他にはないデザインや風合いのアイテムを楽しんで頂けます。
-                        </p>
-                    </div>
-                </div>
-                <div class="col-2 wow fadeInUp" data-wow-delay="0.6s">
-                    <img src="/images/the-end.jpg" alt="Dancer"/>
-                </div>
-            </div>
-            <aside id="gallery" class="row text-center scrollto clearfix text-center" data-featherlight-gallery
-            data-featherlight-filter="a">
-                <a href="/images/gallery-images/gallery-image-1.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.1s"><img src="/images/gallery-images/gallery-image-1.jpg" alt="Landing Page"/></a>
-                <a href="/images/gallery-images/gallery-image-2.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.3s"><img src="/images/gallery-images/gallery-image-2.jpg" alt="Landing Page"/></a>
-                <a href="/images/gallery-images/gallery-image-3.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.5s"><img src="/images/gallery-images/gallery-image-3.jpg" alt="Landing Page"/></a>
-                <a href="/images/gallery-images/gallery-image-4.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="1.1s"><img src="/images/gallery-images/gallery-image-4.jpg" alt="Landing Page"/></a>
-                <a href="/images/gallery-images/gallery-image-5.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.9s"><img src="/images/gallery-images/gallery-image-5.jpg" alt="Landing Page"/></a>
-                <a href="/images/gallery-images/gallery-image-6.jpg" data-featherlight="image" class="col-3 wow fadeIn"
-                   data-wow-delay="0.7s"><img src="/images/gallery-images/gallery-image-6.jpg" alt="Landing Page"/></a>
-            </aside>
-    
-        </div>
-
-
-        <aside id="youtube" class="scrollto text-center" data-enllax-ratio=".2">
+        <aside id="youtube" class="secondary-color scrollto text-center" data-enllax-ratio=".2">
             <div class="row clearfix">
                 <div class="section-heading">
                     <h2 class="section-title">YouTube</h2>
@@ -312,7 +316,7 @@
             </div>
         </aside>
 
-        <section id="contact" class="secondary-color scrollto text-center" data-enllax-ratio=".2">
+        <section id="contact" class="scrollto text-center" data-enllax-ratio=".2">
             <div class="row clearfix wow fadeIn" data-wow-delay="0.3s">
                 <div class="section-heading">
                     <h2 class="section-title">Contact</h2>
@@ -348,7 +352,7 @@
                       </tr>
                     </table>
                     <p class="btn">
-                        <span><input type="submit" value="　 確認 　" /></span>
+                        <span><input type="submit" value="　 送信 　" /></span>
                     </p>
                     {!! Form::close() !!}
                 </div>            
