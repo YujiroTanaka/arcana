@@ -183,6 +183,7 @@ class AdminController extends Controller
         Item::query()->delete();
         foreach ($response_array['items'] as $item) {
             Item::create([
+                'item_id' => $item['item_id'],
                 'title' => $item['title'],
                 'price' => $item['price'],
                 'image_url' => $item['img1_origin'],

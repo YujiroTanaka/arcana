@@ -21,6 +21,7 @@
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
+                    <th>BASE ID</th>
                     <th>タイトル</th>
                     <th>値段</th>
                     <th>画像</th>
@@ -30,6 +31,7 @@
                 <tbody>
                   @foreach($items as $item)
                     <tr>
+                      <td>{{ $item->item_id }}</td>
                       <td>{{ $item->title }}</td>
                       <td>¥{{ $item->price }}</td>
                       <td><img src="{{ $item->image_url }}" width="50px" alt="item{{$item->id}}"/></td>
