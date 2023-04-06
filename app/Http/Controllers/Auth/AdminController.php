@@ -47,4 +47,36 @@ class AdminController extends Controller
         $min = 1;
         return view('auth.contact_detail', compact('contact', 'max', 'min'));
     }
+
+    /**
+     * お知らせ一覧
+     *
+     */
+    public function information()
+    {
+        $informations = AdminInformation::orderByDesc('id')->get();
+        return view('auth.information', compact('informations'));
+    }
+
+    /**
+     * お知らせ編集画面
+     *
+     */
+    public function informationEdit($id)
+    {
+        $information = AdminInformation::find($id);
+        return view('auth.information_edit', compact('information'));
+    }
+
+    /**
+     * お知らせ編集処理
+     *
+     */
+    public function informationEditExec(Request $request, $id)
+    {
+        $update = $request->all();
+        $information = AdminInformation::find($id);
+        $information->update($update);
+        return redirect('admin/information/edit/' . $id);
+    }
 }

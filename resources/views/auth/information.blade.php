@@ -3,59 +3,55 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1 class="ml-3">Contact</h1>
+    <h1 class="ml-3">Information</h1>
 @stop
 
 @section('content')
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
+        <div class="col-12 mb-4">
           <div class="card">
             <div class="card-header bg-secondary">
-              <h3 class="card-title">お問い合わせ</h3>
+              <h3 class="card-title">お知らせ一覧</h3>
             </div>
-            <!-- /.card-header -->
             <div class="card-body table-responsive p-0">
               <table class="table table-hover text-nowrap">
                 <thead>
                   <tr>
-                    <th>ご用件</th>
-                    <th>お名前</th>
-                    <th>メールアドレス</th>
+                    <th>ID</th>
+                    <th>お知らせ日時</th>
                     <th>内容</th>
-                    <th>日時</th>
-                    <th>詳細</th>
+                    <th>作成日</th>
+                    <th>編集</th>
+                    <th>削除</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($contacts as $contact)
+                  @foreach($informations as $information)
                     <tr>
-                      <td>{{ $contact->type }}</td>
-                      <td>{{ $contact->name }}</td>
-                      <td>{{ $contact->email }}</td>
-                      <td class="msg">
-                        {{ mb_substr($contact->msg, 0, 20) }}
-                        @if (mb_strlen($contact->msg) > 20)
-                          ...
-                        @endif
-                      </td>
-                      <td>{{ $contact->created_at }}</td>
+                      <td>{{ $information->id }}</td>
+                      <td>{{ $information->information_date ? $information->information_date->format('Y年m月d日') : '' }}</td>
+                      <td>{{ $information->detail }}</td>
+                      <td>{{ $information->created_at }}</td>
                       <td>
-                        <a href="contact/{{ $contact->id }}">
-                          <span class="badge bg-secondary">詳細</span>
+                        <a href="information/edit/{{ $information->id }}">
+                          <span class="badge bg-secondary">編集</span>
+                        </a>
+                      </td>
+                      <td>
+                        <a href="information/edit/{{ $information->id }}">
+                          <span class="badge bg-danger">削除</span>
                         </a>
                       </td>
                     </tr>
-                  </a>
                   @endforeach
                 </tbody>
               </table>
             </div>
-            <!-- /.card-body -->
           </div>
-          <!-- /.card -->
         </div>
       </div>
+      <!-- /.row -->
     </div><!-- /.container-fluid -->
   @stop
 

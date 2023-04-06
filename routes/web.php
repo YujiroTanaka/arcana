@@ -23,4 +23,9 @@ Route::prefix('admin')->group(function () {
     Route::get('/', 'Auth\AdminController@index')->name('admin.index');
     Route::get('contact', 'Auth\AdminController@contact')->name('admin.contact');
     Route::get('contact/{id}', 'Auth\AdminController@contactDetail')->name('admin.contact_detail');
+    Route::prefix('information')->group(function () {
+        Route::get('/', 'Auth\AdminController@information');
+        Route::get('edit/{id}', 'Auth\AdminController@informationEdit');
+        Route::post('edit/{id}', 'Auth\AdminController@informationEditExec');
+    });
 });
