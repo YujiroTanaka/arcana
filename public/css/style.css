@@ -2167,7 +2167,7 @@ blockquote {
     }
 
     #banner-content.row {
-        padding-top: 85px !important;
+        padding: 85px 0 0 !important;
     }
 
     #banner-logo {
@@ -2272,7 +2272,7 @@ blockquote {
     }
 
     #banner-content.row {
-        padding-top: 85px !important;
+        padding: 85px 0 0 !important;
     }
 
     /*Navigation*/

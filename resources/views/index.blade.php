@@ -99,16 +99,16 @@
             <div class="flexbox">
                 <div class="box1">
                     <a href="https://theend0304.base.shop/items/71459134" class="wow fadeIn"
-                    data-wow-delay="0.2s"><img src="/images/gallery-images/gallery-image-5.jpg" alt="Landing Page"/></a>
+                    data-wow-delay="0.2s"><img src="/images/banner-images/ayakashi.jpg" alt="ayakashi"/></a>
                  </div>
                 <div class="box2">
                     <a href="https://theend0304.base.shop/items/69282819" class="wow fadeIn"data-wow-delay="0.1s">
-                        <img src="/images/gallery-images/gallery-image-4.jpg" alt="Landing Page"/>
+                        <img src="images/banner-images/abyspey.jpg" alt="abyspay"/>
                     </a>
                  </div>
                 <div class="box3">
                     <a href="https://theend0304.base.shop/items/69179826" class="wow fadeIn"
-                    data-wow-delay="0.3s"><img src="/images/gallery-images/gallery-image-6.jpg" alt="Landing Page"/></a>
+                    data-wow-delay="0.3s"><img src="images/banner-images/sunpachi.jpg" alt="sunpachi"/></a>
                  </div>
             </div>
         </section>

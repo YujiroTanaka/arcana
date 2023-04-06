@@ -643,11 +643,11 @@ sup {
     }
     .flexbox .box1 {
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 10px;
     }
     .flexbox .box2, .flexbox .box3 {
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto 10px;
     }
   }
 
