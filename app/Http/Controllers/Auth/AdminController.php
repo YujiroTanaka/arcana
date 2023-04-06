@@ -74,9 +74,39 @@ class AdminController extends Controller
      */
     public function informationEditExec(Request $request, $id)
     {
-        $update = $request->all();
+        $data = $request->all();
         $information = AdminInformation::find($id);
-        $information->update($update);
+        $information->update($data);
         return redirect('admin/information/edit/' . $id);
+    }
+
+    /**
+     * お知らせ追加画面
+     *
+     */
+    public function informationRegister()
+    {
+        return view('auth.information_register');
+    }
+
+    /**
+     * お知らせ追加処理
+     *
+     */
+    public function informationRegisterExec(Request $request)
+    {
+        $data = $request->all();
+        $information = AdminInformation::create($data);
+        return redirect('admin/information/edit/' . $information->id);
+    }
+
+    /**
+     * お知らせ削除
+     *
+     */
+    public function informationDelete($id)
+    {
+        AdminInformation::find($id)->delete();
+        return redirect('admin/information');
     }
 }

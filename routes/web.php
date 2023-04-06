@@ -27,5 +27,8 @@ Route::prefix('admin')->group(function () {
         Route::get('/', 'Auth\AdminController@information');
         Route::get('edit/{id}', 'Auth\AdminController@informationEdit');
         Route::post('edit/{id}', 'Auth\AdminController@informationEditExec');
+        Route::get('register', 'Auth\AdminController@informationRegister');
+        Route::post('register', 'Auth\AdminController@informationRegisterExec');
+        Route::get('delete/{id}', 'Auth\AdminController@informationDelete');
     });
 });

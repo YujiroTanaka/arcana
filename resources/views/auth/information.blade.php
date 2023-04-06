@@ -12,7 +12,10 @@
         <div class="col-12 mb-4">
           <div class="card">
             <div class="card-header bg-secondary">
-              <h3 class="card-title">お知らせ一覧</h3>
+              <h3 class="card-title pt-1">お知らせ一覧</h3>
+              <a class="ml-4" href="information/register">
+                <span class="badge bg-white p-2">追加</span>
+              </a>              
             </div>
             <div class="card-body table-responsive p-0">
               <table class="table table-hover text-nowrap">
@@ -35,12 +38,12 @@
                       <td>{{ $information->created_at }}</td>
                       <td>
                         <a href="information/edit/{{ $information->id }}">
-                          <span class="badge bg-secondary">編集</span>
+                          <span class="badge bg-secondary p-2">編集</span>
                         </a>
                       </td>
                       <td>
-                        <a href="information/edit/{{ $information->id }}">
-                          <span class="badge bg-danger">削除</span>
+                        <a href="information/delete/{{ $information->id }}">
+                          <span class="badge bg-danger p-2">削除</span>
                         </a>
                       </td>
                     </tr>
