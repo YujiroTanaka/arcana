@@ -8,12 +8,13 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\AdminInformation;
 use App\Models\Contact;
+use App\Models\Item;
 
 class AdminController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware('auth:admin')->except('itemRegister');
     }
     /**
      * ダッシュボード
@@ -108,5 +109,85 @@ class AdminController extends Controller
     {
         AdminInformation::find($id)->delete();
         return redirect('admin/information');
+    }
+
+    /**
+     * 商品一覧
+     *
+     */
+    public function item()
+    {
+        $items = Item::orderBy('id')->get();
+        return view('auth.item', compact('items'));
+    }
+
+    /**
+     * 商品更新
+     *
+     */
+    public function itemRegister()
+    {
+        $client_id = '0ba8ef67ef642272c55f8faef1369068';
+        $client_secret = '719dcbd2ea94d4dcb3776958221cb5ca';
+        $redirect_uri = 'https://theend0304.base.shop/';
+        $code = 'fc6e9aefd154ce8635983ad6cd341fee';
+        if ($code) {
+            $code = 'fc6e9aefd154ce8635983ad6cd341fee';
+        } elseif (isset($_GET['code']) && !empty($_GET['code'])) {
+            $code = $_GET['code'];
+        } else {
+            // 認可コードが無ければBASE側のログイン画面にリダイレクト
+            $auth_url = '';
+            $auth_url .= 'https://api.thebase.in/1/oauth/authorize';
+            $auth_url .= '?response_type=code';
+            $auth_url .= '&client_id='.$client_id;
+            $auth_url .= '&redirect_uri='.$redirect_uri;
+            $auth_url .= '&scope=read_items';
+            header('Location:'.$auth_url);
+            exit;
+        }
+        $params = array(
+            'client_id'     => $client_id,
+            'client_secret' => $client_secret,
+            'code'          => $code,
+            'grant_type'    => 'authorization_code',
+            'redirect_uri'  => $redirect_uri,
+        );
+        $headers = array(
+            'Content-Type: application/x-www-form-urlencoded',
+        );
+        $request_options = array(
+            'http' => array(
+                'ignore_errors' => true,
+                'method'  => 'POST',
+                'content' => http_build_query($params),
+                'header'  => implode("\r\n", $headers),
+            ),
+        );
+        $context = stream_context_create($request_options);
+        $response = file_get_contents('https://api.thebase.in/1/oauth/token', false, $context);
+        $response_array = json_decode($response, true);
+        $headers = array(
+            'Authorization: Bearer ' . $response_array['access_token'],
+        );
+        $request_options = array(
+            'http' => array(
+                'ignore_errors' => true,
+                'method' => 'GET',
+                'header' => implode("\r\n", $headers),
+            ),
+        );
+        $context = stream_context_create($request_options);
+        $response = file_get_contents('https://api.thebase.in/1/items?limit=6&offset=0', false, $context);
+        $response_array = json_decode($response, true);
+        Item::query()->delete();
+        foreach ($response_array['items'] as $item) {
+            Item::create([
+                'title' => $item['title'],
+                'price' => $item['price'],
+                'image_url' => $item['img1_origin'],
+            ]);
+        }
+        return redirect('admin/item');
     }
 }

@@ -31,4 +31,6 @@ Route::prefix('admin')->group(function () {
         Route::post('register', 'Auth\AdminController@informationRegisterExec');
         Route::get('delete/{id}', 'Auth\AdminController@informationDelete');
     });
+    Route::get('item', 'Auth\AdminController@item');
+    Route::get('item/register', 'Auth\AdminController@itemRegister');
 });

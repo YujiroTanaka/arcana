@@ -303,6 +303,11 @@ return [
             'icon' => 'fas fa-fw fa-th',
         ],
         [
+            'text' => '商品',
+            'url'  => 'admin/item',
+            'icon' => 'fas fa-fw fa-tag',
+        ],
+        [
             'text' => 'ブログ',
             'url'  => 'admin/blog',
             'icon' => 'fas fa-fw fa-pen',
