@@ -24,6 +24,7 @@
                     <th>ID</th>
                     <th>お知らせ日時</th>
                     <th>内容</th>
+                    <th>ステータス</th>
                     <th>作成日</th>
                     <th>編集</th>
                     <th>削除</th>
@@ -35,6 +36,7 @@
                       <td>{{ $information->id }}</td>
                       <td>{{ $information->information_date ? $information->information_date->format('Y年m月d日') : '' }}</td>
                       <td>{{ $information->detail }}</td>
+                      <td>{{ [0=>'Todo', 1=>'完了'][$information->status] }}</td>
                       <td>{{ $information->created_at }}</td>
                       <td>
                         <a href="information/edit/{{ $information->id }}">
