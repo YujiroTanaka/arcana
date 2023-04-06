@@ -1454,7 +1454,7 @@ blockquote {
     padding: 14px 0;
     border-bottom: 1px dotted #e1e1e1;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .pricing-block li:last-of-type {
@@ -1462,7 +1462,7 @@ blockquote {
 }
 
 .pricing-block h3 {
-    font-size:17px;
+    font-size:15px;
     text-transform:uppercase;
     padding-bottom:0;
     margin-bottom: 10px;
@@ -1470,6 +1470,7 @@ blockquote {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    height: 31px;
 }
 
 .pricing-sub {

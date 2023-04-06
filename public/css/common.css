@@ -128,7 +128,8 @@ a:hover, #header.nav-solid nav a:hover {
     padding: 10px 0;
   }
   .pricing-block h3 {
-    font-size:12px;
+    font-size:10px;
+    height: 21px;
   }
   .pricing-block li {
     font-size: 15px;

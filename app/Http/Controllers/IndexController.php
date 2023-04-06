@@ -30,6 +30,9 @@ class IndexController extends Controller
         }
 
         $items = Item::orderBy('id')->get();
+        foreach ($items as $item) {
+            $item['price'] = number_format($item['price']);
+        }
 
         return view('index', compact('snippets', 'items'));
     }

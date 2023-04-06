@@ -137,162 +137,21 @@
                 <div class="section-heading">
                     <h2 class="section-title">NEW ARRIVAL</h2>
                 </div>
-                <a href="https://theend0304.base.shop/items/71735002">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="pricing-block-content">
-                            <h3>OLD COACH Shoulder Bag [NO.422-3961]</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/bb20a17d7bbc031e112074164a1dee48.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item1"/>
+                @foreach($items as $item)
+                    <a href="https://theend0304.base.shop/items/{{ $item->item_id }}">
+                        <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="pricing-block-content">
+                                <h3>{{ $item->title }}</h3>
+                                <div class="pricing">
+                                    <img src="{{ $item->image_url }}?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item{{ $item->id }}"/>
+                                </div>
+                                <ul>
+                                    <li>¥{{ $item->price }}-</li>
+                                </ul>
                             </div>
-                            <ul>
-                                <li>¥10000</li>
-                            </ul>
                         </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71734791">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="pricing-block-content">
-                            <h3>OLD COACH Shoulder Bag [No.0254-909]</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/e43b00821277ec904e256ddf513f10fe.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item2"/>
-                            </div>
-                            <ul>
-                                <li>¥13000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71734666">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="pricing-block-content">
-                            <h3>OLD COACH Drawstring Bag [5FM-4931]</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/9f3868450d2974a62a8f6f61deb3641f.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item3"/>
-                            </div>
-                            <ul>
-                                <li>¥6600</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71734434">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="pricing-block-content">
-                            <h3>Burberry's Drawstring Bag</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/a07907d2730a8759d41d339dfe06fea3.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item4"/>
-                            </div>
-                            <ul>
-                                <li>¥18800</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71734297">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="pricing-block-content">
-                            <h3>POLO RALPH LAUREN Pochette Shoulder Bag</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/1d92525e7c497603f1216b27ea2a7fcc.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item5"/>
-                            </div>
-                            <ul>
-                                <li>¥11000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71734176">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="pricing-block-content">
-                            <h3>POLO RALPH LAUREN Drawstring Bag</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/fb36abbce01b20f53dc4fe23b02391a7.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item6"/>
-                            </div>
-                            <ul>
-                                <li>¥8800</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71555898">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="pricing-block-content">
-                            <h3>U.S.NAVY NAVY DEPARTMENT Overall</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/df70dcce9b324cc97cb9f2df839b4750.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item7"/>
-                            </div>
-                            <ul>
-                                <li>¥22000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71554385">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="pricing-block-content">
-                            <h3>Romanian Army Wool Tapered Pants</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/cacbeb37e6df81de209f1e236f8aef77.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item8"/>
-                            </div>
-                            <ul>
-                                <li>¥3800</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71545783">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="pricing-block-content">
-                            <h3>80's U.S.ARMY SO-SEW STYLES inc M-65 JKT</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/67d5e42e0c119da8e6033c3d6e73b31c.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item9"/>
-                            </div>
-                            <ul>
-                                <li>¥7700</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71532696">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="pricing-block-content">
-                            <h3>German Army Military Coat ［with liner］</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/d5a95a50b4c6d98096fcfad309663492.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item10"/>
-                            </div>
-                            <ul>
-                                <li>¥5500</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71532447">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="pricing-block-content">
-                            <h3>Russian Army Officer Parade Coat［cold war era］</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/4e09ca0402acf1085f9ca0723849c926.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item11"/>
-                            </div>
-                            <ul>
-                                <li>¥35000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://theend0304.base.shop/items/71532172">
-                    <div class="pricing-block col-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="pricing-block-content">
-                            <h3>50's French Army Wool Coat</h3>
-                            <div class="pricing">
-                                <img src="https://baseec-img-mng.akamaized.net/images/item/origin/ead5d517bb7c469ee5e0a3d50d950a96.jpg?imformat=generic&q=90&im=Resize,width=300,type=normal" alt="item12"/>
-                            </div>
-                            <ul>
-                                <li>¥22000</li>
-                            </ul>
-                        </div>
-                    </div>
-                </a>
+                    </a>
+                @endforeach
             </div>
             <a href="https://theend0304.base.shop/" class="button" target="_blank">
                 More</i>
