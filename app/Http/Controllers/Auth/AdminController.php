@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\AdminInformation;
 use App\Models\Contact;
 use App\Models\Item;
+use App\Models\Blog;
 
 class AdminController extends Controller
 {
@@ -190,5 +191,67 @@ class AdminController extends Controller
             ]);
         }
         return redirect('admin/item');
+    }
+
+    /**
+     * ブログ一覧
+     *
+     */
+    public function blog()
+    {
+        $blogs = Blog::orderByDesc('id')->get();
+        return view('auth.blog', compact('blogs'));
+    }
+
+    /**
+     * ブログ詳細
+     *
+     */
+    public function blogDetail($id)
+    {
+        $blog = Blog::find($id);
+        return view('auth.blog_detail', compact('blog'));
+    }
+
+    /**
+     * ブログ編集画面
+     *
+     */
+    public function blogEdit($id)
+    {
+        $blog = Blog::find($id);
+        return view('auth.blog_edit', compact('blog'));
+    }
+
+    /**
+     * ブログ編集処理
+     *
+     */
+    public function blogEditExec(Request $request, $id)
+    {
+        $data = $request->all();
+        $blog = Blog::find($id);
+        $blog->update($data);
+        return redirect('admin/blog/edit/' . $id);
+    }
+
+    /**
+     * ブログ追加画面
+     *
+     */
+    public function blogRegister()
+    {
+        return view('auth.blog_register');
+    }
+
+    /**
+     * ブログ追加処理
+     *
+     */
+    public function blogRegisterExec(Request $request)
+    {
+        $data = $request->all();
+        $blog = Blog::create($data);
+        return redirect('admin/blog/detail/' . $blog->id);
     }
 }

@@ -33,4 +33,12 @@ Route::prefix('admin')->group(function () {
     });
     Route::get('item', 'Auth\AdminController@item');
     Route::get('item/register', 'Auth\AdminController@itemRegister');
+    Route::prefix('blog')->group(function () {
+        Route::get('/', 'Auth\AdminController@blog');
+        Route::get('detail/{id}', 'Auth\AdminController@blogDetail');
+        Route::get('edit/{id}', 'Auth\AdminController@blogEdit');
+        Route::post('edit/{id}', 'Auth\AdminController@blogEditExec');
+        Route::get('register', 'Auth\AdminController@blogRegister');
+        Route::post('register', 'Auth\AdminController@blogRegisterExec');
+    });
 });
