@@ -68,7 +68,6 @@
                     <nav id="nav-main">
                         <ul>
                             <li><a href="#banner">TOP</a></li>
-                            <li><a href="#series-banner">ORIGINAL ITEM</a></li>
                             <li><a href="#about">ABOUT</a></li>
                             <li><a href="#newarrival">NEW ARRIVAL</a></li>
                             <li><a href="#youtube">YOUTUBE</a></li>
@@ -93,9 +92,6 @@
 
     <main id="content">
         <section id="series-banner" class="text-center scrollto clearfix ">
-            <div class="section-heading">
-                <h2 class="section-title">ORIGINAL ITEM</h2>
-            </div>
             <div class="flexbox">
                 <div class="box1">
                     <a href="https://theend0304.base.shop/items/71459134" class="wow fadeIn"
@@ -119,15 +115,22 @@
                     <div class="section-heading">
                         <h2 class="section-title">ABOUT</h2>
                         <p class="section-subtitle">
-                            《ここだから出会える一着》をコンセプトにしたお店です。<br>
-                            デザインやディティール、素材など面白い古着とVINTAGE、リペアやカスタ厶を施したアイテムなどを取り揃えております。<br> 
+                            <strong>//長く着続ける洋服// ARCANA-アルカナ-</strong><br><br>
+                            <strong>ー・ーARCANAレザー・ー・ー・ー・ー・ー・ー・ー・ー</strong><br> 
                             併設してるアトリエにてオリジナルアイテムやリメイクアイテム製作しております。<br>
-                            オリジナルアイテムではVINTAGE FABRICやUSEDアイテムを使用しており他にはないデザインや風合いのアイテムを楽しんで頂けます。
+                            近年、急速にニホンジカの生息数が増加し、日本全国で生態系や農林業、<br>
+                            さらには私たちの生活にまで深刻な被害をもたらしているとされ<br>
+                            害獣として駆除される鹿革のみを使用<br>
+                            ここまでは世にある鹿革ですが我々のARCANAレザーは"その”革の中でも<br>
+                            「野生の傷」「狩猟の際についた傷や穴」「微生物に分解されて革の表面が荒れている」<br>
+                            などアパレルが使い物にならないとして売れずにタンナー(革屋)さんが廃棄せざる得ない革<br>
+                            <strong>・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー</strong><br><br>
+                            自然の摂理に抗わず<br>ありのままのかっこよさを感じれるアイテム
                         </p>
                     </div>
                 </div>
                 <div class="col-2 wow fadeInUp" data-wow-delay="0.6s">
-                    <img src="/images/the-end.jpg" alt="Dancer"/>
+                    <img src="/images/make_a_story.jpg" alt="make a story"/>
                 </div>
             </div>    
         </div>

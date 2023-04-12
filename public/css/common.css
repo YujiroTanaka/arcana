@@ -208,7 +208,7 @@ body {
 
 .section-subtitle {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
-    font-size: 16px;
+    font-size: 14px;
     font-weight:300;
     color:#9c9c9c;
 }
@@ -614,6 +614,7 @@ sup {
 
   #series-banner {
     margin: 50px auto 50px;
+    display: none;
   }
   #series-banner img {
     width: 100%;
@@ -635,6 +636,7 @@ sup {
   @media screen and (max-width: 768px) {
     #series-banner {
       margin: 0;
+      display: block;
     }  
     #series-banner .section-heading {
       display: none;
