@@ -212,6 +212,7 @@
                         <td><textarea name="msg" cols="50" rows="5" required></textarea></td>
                       </tr>
                     </table>
+                    {{ Form::text('honeypot', '', ['style' => 'display:none']) }}
                     <p class="btn">
                         <span><input type="submit" value="　 送信 　" /></span>
                     </p>

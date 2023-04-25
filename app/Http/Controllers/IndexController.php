@@ -39,6 +39,10 @@ class IndexController extends Controller
 
     public function contact(Request $request)
     {
+        if (isset($request->honeypot)) {
+            abort(404);
+        }
+        
         Contact::create([
             'type' => $request->type,
             'name' => $request->name,
