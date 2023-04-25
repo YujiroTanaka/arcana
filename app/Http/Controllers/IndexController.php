@@ -42,7 +42,11 @@ class IndexController extends Controller
         if (isset($request->honeypot)) {
             abort(404);
         }
-        
+
+        if (isset($request->type) && !in_array($request->type, ['リペア', 'リメイク', 'オーダー', 'その他'])) {
+            abort(404);
+        }
+
         Contact::create([
             'type' => $request->type,
             'name' => $request->name,
