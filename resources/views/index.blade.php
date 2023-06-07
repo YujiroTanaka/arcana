@@ -68,7 +68,7 @@
                     <nav id="nav-main">
                         <ul>
                             <li><a href="#banner">TOP</a></li>
-                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#concept">CONCEPT</a></li>
                             <li><a href="#newarrival">NEW ARRIVAL</a></li>
                             <li><a href="#youtube">YOUTUBE</a></li>
                             <li><a href="#contact">CONTACT</a></li>
@@ -109,27 +109,36 @@
             </div>
         </section>
 
-        <div id="about" class="secondary-color scrollto clearfix">
+        <div id="concept" class="secondary-color scrollto clearfix">
             <div class="row no-padding-bottom clearfix">
                 <div class="col-2 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="section-heading">
-                        <h2 class="section-title">ABOUT</h2>
+                        <h2 class="section-title">CONCEPT</h2>
                         <p class="section-subtitle">
-                            <strong>//長く着続ける洋服// ARCANA-アルカナ-</strong><br><br>
-                            <strong>ー・ーARCANAレザー・ー・ー・ー・ー・ー・ー・ー・ー</strong><br> 
-                            近年、急速にニホンジカの生息数が増加し、日本全国で生態系や農林業、<br>
-                            さらには私たちの生活にまで深刻な被害をもたらしているとされ<br>
-                            害獣として駆除される鹿革のみを使用<br>
-                            ここまでは世にある鹿革ですが我々のARCANAレザーは"その”革の中でも<br>
-                            「野生の傷」「狩猟の際についた傷や穴」「微生物に分解されて革の表面が荒れている」<br>
-                            などアパレルが使い物にならないとして売れずにタンナー(革屋)さんが廃棄せざる得ない革<br>
-                            <strong>・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー・ー</strong><br><br>
-                            自然の摂理に抗わず<br>ありのままのかっこよさを感じれるアイテム
+                            <strong>「常識の概念を変える服」</strong><br><br>
+                            一般的には綺麗な生地を使って洋服を作る<br>
+                            傷があったり、破れがある生地は廃棄される<br>
+                            我々が使用するのは日本国内に生息する野生の鹿革<br>
+                            雄の喧嘩傷「けんかきず」はもちろん<br>
+                            害獣駆除の際に付いてしまう銃痕「じゅうこん」<br>
+                            微生物が分解してしまった銀面が禿げた革<br><br>
+
+                            この自然界で起きた事実を心から尊重し愛して、<br>
+                            一般的に受け入れられない概念をデザインに変えて、<br>
+                            唯一無二の服を創る<br><br>
+
+                            「子どもの次の代まで続く最高の嗜好品」<br>
+                            洋服は最低限でいい<br>
+                            洋服への拘りは最高の嗜好品である<br><br>
+
+                            最高の嗜好品を子どもの次の代まで着続けていけるために<br>
+                            「縫製・生地・付属品・リペア・リメイク」全てに拘り<br>
+                            あなたの最高の嗜好品を未来に繋げる
                         </p>
                     </div>
                 </div>
                 <div class="col-2 wow fadeInUp" data-wow-delay="0.6s">
-                    <img src="/images/make_a_story.jpg" alt="make a story"/>
+                    <img src="/images/make_a_story.jpg" alt="make a story" style="padding-top:120px"/>
                 </div>
             </div>    
         </div>
@@ -213,6 +222,9 @@
                       </tr>
                     </table>
                     {{ Form::text('honeypot', '', ['style' => 'display:none']) }}
+                    <p>
+                        goodbase.jpからのメールを受信できるように迷惑メール設定から解除、もしくは受信設定をして頂く様お願い致します。
+                    </p>
                     <p class="btn">
                         <span><input type="submit" value="　 送信 　" /></span>
                     </p>
