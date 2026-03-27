@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(*)",
+      "Bash(git commit:*)",
+      "Bash(npm run *)",
+      "Bash(curl *)",
+      "Read(*)",
+      "Write(*)",
+      "Bash(identify /Users/yujiro/docker/src/arcana/public/images/gallery-images/gallery-image-1.jpg)",
+      "Bash(sips --cropToHeightWidth 1200 1600 --cropOffset 6400 0 xd/screen/TOP.jpg --out /tmp/page_bottom.jpg)",
+      "Bash(for y:*)",
+      "Bash(do)",
+      "Bash(sips --cropToHeightWidth 200 1600 --cropOffset $y 0 xd/screen/TOP.jpg --out /tmp/strip2_$y.jpg)",
+      "Bash(done)",
+      "Bash(sips --cropToHeightWidth 200 1600 --cropOffset $y 0 xd/screen/TOP.jpg --out /tmp/mid_$y.jpg)",
+      "Bash(sips --cropToHeightWidth 180 800 --cropOffset 1800 600 xd/screen/TOP.jpg --out /tmp/basemodel_link.jpg)",
+      "Bash(sips -Z 1200 /tmp/basemodel_link.jpg --out /tmp/basemodel_link2.jpg)",
+      "Bash(sips --cropToHeightWidth 800 1600 --cropOffset 2000 0 xd/screen/TOP.jpg --out /tmp/grid_section.jpg)",
+      "Bash(sips -Z 1600 /tmp/grid_section.jpg --out /tmp/grid_section2.jpg)"
+    ]
+  }
+}

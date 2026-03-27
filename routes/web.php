@@ -1,22 +1,25 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', 'IndexController@index')->name('index');
+
+Route::get('/about', 'IndexController@about')->name('about');
+Route::get('/order', 'IndexController@order')->name('order');
+Route::get('/repair', 'IndexController@repair')->name('repair');
+Route::get('/the-end', 'IndexController@theEnd')->name('the-end');
+Route::get('/products', 'IndexController@products')->name('products');
+
+Route::get('/pickup', 'IndexController@pickup')->name('pickup');
+Route::get('/pickup/{id}', 'IndexController@pickupDetail')->name('pickup.detail');
+
+Route::get('/contact', 'IndexController@contactPage')->name('contact');
+Route::post('/contact', 'IndexController@contact')->name('contact.post');
+
+// Legacy POST to / (backward compat)
 Route::post('/', 'IndexController@contact');
 
 Route::prefix('admin')->group(function () {
     Route::get('login', function () {
-        return view('auth/login'); // blade.php
+        return view('auth/login');
     });
     Route::post('login', 'Auth\LoginController@adminLogin')->name('admin.login');
     Route::match(['get', 'post'], 'logout', 'Auth\LoginController@adminLogout')->name('admin.logout');

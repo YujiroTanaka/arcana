@@ -7,55 +7,141 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
 use App\Models\Contact;
 use App\Models\Item;
+use App\Models\Blog;
 use Google_Client;
 use Google_Service_YouTube;
 
 class IndexController extends Controller
 {
-    public function index()
+    private function getYoutubeSnippets(int $max = 4): array
     {
-        $client = new Google_Client();
-        $client->setDeveloperKey(env('GOOGLE_API_KEY'));
-        $youtube = new Google_Service_YouTube($client);
-        $items = $youtube->search->listSearch('snippet', [
-            'channelId'  => 'UCSOVOu_5JyhtFkTVxMzedDA',
-            'order'      => 'date',
-            'maxResults' => 4,
-        ]);
-        
-        $ids = collect($items->getItems())->pluck('id')->all();
-        $snippets = collect($items->getItems())->pluck('snippet')->all();
-        foreach ($snippets as $key => $snippet) {
-            $snippet->videoId = $ids[$key]->videoId;
-        }
+        $cacheKey = 'youtube_snippets_' . $max;
 
+        return \Cache::remember($cacheKey, now()->addHours(12), function () use ($max) {
+            try {
+                $client = new Google_Client();
+                $client->setDeveloperKey(env('GOOGLE_API_KEY'));
+                $youtube = new Google_Service_YouTube($client);
+                $items = $youtube->search->listSearch('snippet', [
+                    'channelId'  => 'UCSOVOu_5JyhtFkTVxMzedDA',
+                    'order'      => 'date',
+                    'maxResults' => $max,
+                ]);
+                $ids = collect($items->getItems())->pluck('id')->all();
+                $snippets = collect($items->getItems())->pluck('snippet')->all();
+                foreach ($snippets as $key => $snippet) {
+                    $snippet->videoId = $ids[$key]->videoId;
+                }
+                return $snippets;
+            } catch (\Exception $e) {
+                return [];
+            }
+        }) ?? [];
+    }
+
+    private function getItems(): \Illuminate\Database\Eloquent\Collection
+    {
         $items = Item::orderBy('id')->get();
         foreach ($items as $item) {
             $item['price'] = number_format($item['price']);
         }
+        return $items;
+    }
 
-        return view('index', compact('snippets', 'items'));
+    public function index()
+    {
+        $snippets = $this->getYoutubeSnippets(4);
+        $items = $this->getItems();
+        $pickups = Blog::where('status', 1)->orderByDesc('id')->limit(3)->get();
+
+        return view('index', compact('snippets', 'items', 'pickups'));
+    }
+
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function order()
+    {
+        $items = $this->getItems();
+        return view('order', compact('items'));
+    }
+
+    public function repair()
+    {
+        $samples = Blog::where('status', 1)
+            ->where('category', 'order_repair')
+            ->orderByDesc('id')
+            ->limit(3)
+            ->get();
+        return view('repair', compact('samples'));
+    }
+
+    public function theEnd()
+    {
+        $snippets = $this->getYoutubeSnippets(4);
+        return view('the-end', compact('snippets'));
+    }
+
+    public function products()
+    {
+        $items = $this->getItems();
+        return view('products', compact('items'));
+    }
+
+    public function pickup(Request $request)
+    {
+        $category = $request->query('category', 'all');
+
+        $query = Blog::where('status', 1)->orderByDesc('id');
+
+        if ($category && $category !== 'all') {
+            $query->where('category', $category);
+        }
+
+        $blogs = $query->paginate(9)->appends(['category' => $category]);
+
+        $currentCategory = $category ?: 'all';
+
+        return view('pickup', compact('blogs', 'currentCategory'));
+    }
+
+    public function pickupDetail($id)
+    {
+        $blog = Blog::where('status', 1)->findOrFail($id);
+
+        $prev = Blog::where('status', 1)->where('id', '<', $id)->orderByDesc('id')->first();
+        $next = Blog::where('status', 1)->where('id', '>', $id)->orderBy('id')->first();
+
+        return view('pickup_detail', compact('blog', 'prev', 'next'));
+    }
+
+    public function contactPage()
+    {
+        return view('contact');
     }
 
     public function contact(Request $request)
     {
-        if (isset($request->honeypot)) {
+        if ($request->honeypot) {
             abort(404);
         }
 
-        if (isset($request->type) && !in_array($request->type, ['リペア', 'リメイク', 'オーダー', 'その他'])) {
+        if ($request->type && !in_array($request->type, ['リペア', 'リメイク', 'オーダー', 'その他'])) {
             abort(404);
         }
 
         Contact::create([
-            'type' => $request->type,
-            'name' => $request->name,
+            'type'  => $request->type,
+            'name'  => $request->name,
             'email' => $request->email,
             'phone' => $request->phone,
-            'msg' => $request->msg,
+            'msg'   => $request->msg,
         ]);
+
         Mail::send(new ContactMail($request->type, $request->name, $request->email, $request->phone, $request->msg));
-        $contact = true;
-        return redirect()->route('index')->with(compact('contact'));
+
+        return redirect()->route('contact')->with('contact', true);
     }
 }
