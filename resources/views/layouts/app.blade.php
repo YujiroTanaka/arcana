@@ -129,6 +129,18 @@
         });
     }, { threshold: 0.15 });
     targets.forEach(function(t) { observer.observe(t); });
+
+    // Hero labels: show on scroll (mobile only)
+    var heroLabels = document.querySelector('.top-hero-labels');
+    if (heroLabels && window.innerWidth <= 768) {
+        var scrolled = false;
+        window.addEventListener('scroll', function() {
+            if (!scrolled && window.scrollY > 30) {
+                scrolled = true;
+                heroLabels.classList.add('is-show');
+            }
+        });
+    }
 })();
 </script>
 @yield('scripts')
