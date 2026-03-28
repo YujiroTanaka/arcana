@@ -10,14 +10,26 @@ use App\Models\Item;
 use App\Models\Blog;
 use Google_Client;
 use Google_Service_YouTube;
+use Illuminate\Support\Facades\Cache;
 
 class IndexController extends Controller
 {
+    private static function fallbackVideos(int $max = 4): array
+    {
+        $fallback = [
+            (object) ['videoId' => '-fkXjXa126U', 'title' => 'その訳は⁉︎優しい価格で革ジャンオーダーできたラッキージェルドルマン！シンプルな漢のカスタマイズ！'],
+            (object) ['videoId' => 'ocv5rVT7gHk', 'title' => '漆黒のbarbour⁉︎見えないアクセントで色気を出したお客様オーダー'],
+            (object) ['videoId' => 'jQJ05l6Y1fY', 'title' => '遂に明日！周年イベントで打ち出されるARCANA馬鹿革アイテム紹介！！'],
+            (object) ['videoId' => 'XqM_0S1D2Ts', 'title' => '藍染ARCANAleather2色使い⁉︎デニムやシルバーとも相性がいいレザーベスト出来上がりました！【お客様オーダーアイテム紹介】'],
+        ];
+        return array_slice($fallback, 0, $max);
+    }
+
     private function getYoutubeSnippets(int $max = 4): array
     {
         $cacheKey = 'youtube_snippets_' . $max;
 
-        return \Cache::remember($cacheKey, now()->addHours(12), function () use ($max) {
+        return Cache::remember($cacheKey, now()->addHours(12), function () use ($max) {
             try {
                 $client = new Google_Client();
                 $client->setDeveloperKey(env('GOOGLE_API_KEY'));
@@ -33,10 +45,10 @@ class IndexController extends Controller
                     $snippet->videoId = $ids[$key]->videoId;
                 }
                 return $snippets;
-            } catch (\Exception $e) {
-                return [];
+            } catch (\Throwable $e) {
+                return self::fallbackVideos($max);
             }
-        }) ?? [];
+        }) ?? self::fallbackVideos($max);
     }
 
     private function getItems(): \Illuminate\Database\Eloquent\Collection

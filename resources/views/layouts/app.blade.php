@@ -115,6 +115,21 @@
         $mobileNav.removeClass('open');
     });
 })(jQuery);
+
+// Scroll animations
+(function() {
+    var targets = document.querySelectorAll('.sa');
+    if (!targets.length) return;
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-show');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    targets.forEach(function(t) { observer.observe(t); });
+})();
 </script>
 @yield('scripts')
 

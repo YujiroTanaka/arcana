@@ -10,7 +10,7 @@
     <div class="top-hero-bg"></div>
 
     {{-- センターのロゴオーバーレイ --}}
-    <div class="top-hero-title-wrap">
+    <div class="top-hero-title-wrap sa sa-fade">
         <img src="/images/logo.png" alt="ARCANA" class="top-hero-logo">
     </div>
 
@@ -42,7 +42,7 @@
 
 {{-- ===== ブランド紹介 + 商品 (白背景) ===== --}}
 <section class="top-brand-section">
-    <div class="top-brand-text-wrap">
+    <div class="top-brand-text-wrap sa sa-up">
         <h2 class="top-brand-heading">唯一無二のダメージディアスキン</h2>
         <p class="top-brand-desc">
             大阪玉造の古着屋THE ENDから生まれたARCANA。<br>
@@ -54,15 +54,15 @@
 
     {{-- ジャケット3点 --}}
     <div class="top-jackets">
-        <a href="" target="_blank" rel="noopener" class="top-jacket-item">
+        <a href="" target="_blank" rel="noopener" class="top-jacket-item sa sa-up sa-delay-1">
             <img src="/images/item/item1.jpg?imformat=generic&q=90&im=Resize,width=500,type=normal" alt="ARCANA AYAKASHI">
             <p class="top-jacket-name">ARCANA AYAKASHI</p>
         </a>
-        <a href="" target="_blank" rel="noopener" class="top-jacket-item">
+        <a href="" target="_blank" rel="noopener" class="top-jacket-item sa sa-up sa-delay-2">
             <img src="/images/item/item2.jpg?imformat=generic&q=90&im=Resize,width=500,type=normal" alt="ARCANA FIRST TRUCKER">
             <p class="top-jacket-name">ARCANA FIRST TRUCKER</p>
         </a>
-        <a href="" target="_blank" rel="noopener" class="top-jacket-item">
+        <a href="" target="_blank" rel="noopener" class="top-jacket-item sa sa-up sa-delay-3">
             <img src="/images/item/item3.jpg?imformat=generic&q=90&im=Resize,width=500,type=normal" alt="ARCANA ABYSPEY">
             <p class="top-jacket-name">ARCANA ABYSPEY</p>
         </a>
@@ -82,7 +82,7 @@
 <section>
     <div class="top-grid">
         {{-- 1: Purpose (左上小) --}}
-        <a href="/about" class="top-grid-cell top-grid-cell--photo top-grid-purpose">
+        <a href="/about" class="top-grid-cell top-grid-cell--photo top-grid-purpose sa sa-up sa-delay-1">
             <img src="/images/grid-purpose.jpg" alt="ARCANA Purpose">
             <div class="top-grid-cell-body">
                 <p class="top-grid-cell-en">ARCANA Purpose</p>
@@ -92,7 +92,7 @@
         </a>
 
         {{-- 2: ARCANA Leather (上2番目小) --}}
-        <a href="/about" class="top-grid-cell top-grid-cell--photo top-grid-leather">
+        <a href="/about" class="top-grid-cell top-grid-cell--photo top-grid-leather sa sa-up sa-delay-2">
             <img src="/images/grid-leather.jpg" alt="ARCANA Leather">
             <div class="top-grid-cell-body">
                 <p class="top-grid-cell-en">ARCANA Leather</p>
@@ -102,7 +102,7 @@
         </a>
 
         {{-- 3: ARCANA about (右縦長) --}}
-        <a href="/about" class="top-grid-cell top-grid-cell--photo top-grid-about">
+        <a href="/about" class="top-grid-cell top-grid-cell--photo top-grid-about sa sa-left sa-delay-3">
             <img src="/images/grid-about.jpg" alt="ARCANA">
             <div class="top-grid-cell-body">
                 <p class="top-grid-cell-en">about</p>
@@ -112,7 +112,7 @@
         </a>
 
         {{-- 4: Designer Interview (左下ワイド) --}}
-        <a href="/pickup" class="top-grid-cell top-grid-cell--photo top-grid-interview">
+        <a href="/pickup" class="top-grid-cell top-grid-cell--photo top-grid-interview sa sa-right">
             <img src="/images/grid-designer.jpg" alt="Designer Interview">
             <span class="top-grid-pickup-label">pickup</span>
             <div class="top-grid-cell-body">
@@ -123,7 +123,7 @@
         </a>
 
         {{-- 5: Order example (右下左) --}}
-        <a href="/pickup?category=order_repair" class="top-grid-cell top-grid-cell--photo top-grid-order">
+        <a href="/pickup?category=order_repair" class="top-grid-cell top-grid-cell--photo top-grid-order sa sa-up sa-delay-1">
             <img src="/images/grid-order.jpg" alt="Order example">
             <span class="top-grid-pickup-label">pickup</span>
             <div class="top-grid-cell-body">
@@ -135,7 +135,7 @@
         </a>
 
         {{-- 6: Repair example (右下右) --}}
-        <a href="/pickup?category=order_repair" class="top-grid-cell top-grid-cell--photo top-grid-repair">
+        <a href="/pickup?category=order_repair" class="top-grid-cell top-grid-cell--photo top-grid-repair sa sa-up sa-delay-2">
             <img src="/images/grid-repair.jpg" alt="Repair example">
             <span class="top-grid-pickup-label">pickup</span>
             <div class="top-grid-cell-body">
@@ -160,14 +160,14 @@
 
 {{-- ===== サービスセクション見出し (白背景) ===== --}}
 <section class="top-service-intro">
-    <p class="top-service-intro-sub">Service</p>
-    <h2 class="top-service-intro-heading">ARCANA・THE ENDのサービスソリューション</h2>
-    <p class="top-service-intro-desc">洋服のリペア/リメイク/古着の販売を行うTHE END<br>そのオリジナルブランドとしてARCANAを展開しております。</p>
+    <p class="top-service-intro-sub sa sa-fade">Service</p>
+    <h2 class="top-service-intro-heading sa sa-up">ARCANA・THE ENDのサービスソリューション</h2>
+    <p class="top-service-intro-desc sa sa-up sa-delay-1">洋服のリペア/リメイク/古着の販売を行うTHE END<br>そのオリジナルブランドとしてARCANAを展開しております。</p>
 </section>
 
 {{-- ===== 3本の横長サービスバナー ===== --}}
 <div class="top-service-banners">
-    <a href="/order" class="top-service-banner">
+    <a href="/order" class="top-service-banner sa sa-left">
         <img src="/images/banner-order.jpg" alt="ARCANA レザーオーダーメイドサービス">
         <div class="top-service-banner-body">
             <p class="top-service-banner-label">ARCANA</p>
@@ -181,7 +181,7 @@
         </div>
     </a>
 
-    <a href="/repair" class="top-service-banner">
+    <a href="/repair" class="top-service-banner sa sa-right">
         <img src="/images/banner-repair.jpg" alt="THE END Leather Repair Service">
         <div class="top-service-banner-body">
             <p class="top-service-banner-label">THE END</p>
@@ -195,7 +195,7 @@
         </div>
     </a>
 
-    <a href="/the-end" class="top-service-banner">
+    <a href="/the-end" class="top-service-banner sa sa-left">
         <img src="/images/banner-used.jpg" alt="THE END Used clothing sales">
         <div class="top-service-banner-body">
             <p class="top-service-banner-label">THE END</p>
@@ -213,7 +213,7 @@
 {{-- ===== YouTube (#f5f5f5) ===== --}}
 <section class="top-youtube">
     <div class="container">
-        <h2 class="top-youtube-title">YOUTUBE</h2>
+        <h2 class="top-youtube-title sa sa-fade">YOUTUBE</h2>
         <div class="youtube-grid">
             @foreach($snippets as $movie)
             <div class="youtube-item">
@@ -222,6 +222,7 @@
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
+                <p class="youtube-item-title">{{ $movie->title }}</p>
             </div>
             @endforeach
         </div>
@@ -239,8 +240,8 @@
 {{-- ===== お問い合わせCTA ===== --}}
 <section class="top-cta">
     <div class="container" style="text-align:center;">
-        <p class="top-cta-sub">CONTACT</p>
-        <a href="/contact" class="top-cta-link">
+        <p class="top-cta-sub sa sa-fade">CONTACT</p>
+        <a href="/contact" class="top-cta-link sa sa-up">
             <h2 class="top-cta-heading">お問い合わせ</h2>
             <span class="top-cta-circle"></span>
         </a>
