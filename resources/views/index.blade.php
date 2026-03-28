@@ -10,7 +10,7 @@
     <div class="top-hero-bg"></div>
 
     {{-- センターのロゴオーバーレイ --}}
-    <div class="top-hero-title-wrap sa sa-fade">
+    <div class="top-hero-title-wrap sa-hero">
         <img src="/images/logo.png" alt="ARCANA" class="top-hero-logo">
     </div>
 
