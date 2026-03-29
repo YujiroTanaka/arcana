@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class AdminInformationSeeder extends Seeder
 {
@@ -79,6 +80,13 @@ class AdminInformationSeeder extends Seeder
             'information_date' => '2023-04-05 00:00:00',
             'detail' => '管理画面サイト変更履歴管理(開発者のみ)',
             'status' => 0,
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
+        DB::table('admin_informations')->insert([
+            'information_date' => '2026-02-23 00:00:00',
+            'detail' => 'リニューアルサイトver1.0プレビュー公開',
+            'status' => 1,
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
