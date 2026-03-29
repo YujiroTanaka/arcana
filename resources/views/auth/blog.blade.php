@@ -50,9 +50,9 @@
                         <td>
                           <select name="positions[{{ $blog->id }}]" class="form-control form-control-sm top-position-select">
                             <option value="">--</option>
-                            <option value="1" @if($blog->top_position == 1) selected @endif>枠1（左・大）</option>
-                            <option value="2" @if($blog->top_position == 2) selected @endif>枠2（右上）</option>
-                            <option value="3" @if($blog->top_position == 3) selected @endif>枠3（右下）</option>
+                            <option value="1" @if($blog->top_position == 1) selected @endif>枠1（左下・大）</option>
+                            <option value="2" @if($blog->top_position == 2) selected @endif>枠2（右下・左）</option>
+                            <option value="3" @if($blog->top_position == 3) selected @endif>枠3（右下・右）</option>
                           </select>
                         </td>
                         <td>{{ $blog->created_at->format('Y.m.d') }}</td>

@@ -5,115 +5,143 @@
 
 @section('content')
 
+@include('partials.page_header', ['title' => 'ARCANAについて', 'current' => 'about'])
+
 {{-- Hero --}}
 <section class="about-hero">
     <div class="container">
-        <div class="about-intro">
-            <div class="about-intro-text">
-                <h2>ABOUT ARCANA</h2>
-                <h3>たった一着にこだわる、<br>ARCANAレザー</h3>
-                <p>
-                    ARCANAは、大阪・玉造に拠点を置くTHE ENDが手がけるオリジナルレザーブランドです。<br><br>
-                    日本国内の野生鹿革を使用し、傷や銃痕、銀面剥げなど一般的に「欠陥」とされる部分こそを
-                    デザインの一部として昇華させた、唯一無二のレザーウェアを製作しています。<br><br>
-                    一着一着が手作業で作られ、世界に同じものは存在しません。
-                    「子どもの次の代まで着続けられる最高の嗜好品」をコンセプトに、
-                    縫製・生地・付属品・リペア・リメイク、全てに徹底的にこだわります。
-                </p>
-            </div>
-            <div>
-                <img src="/images/make_a_story.jpg" alt="ARCANA leather" style="width:100%;">
-            </div>
+        <div class="about-hero-img">
+            <img src="/images/about-hero.jpg" alt="ARCANA">
+        </div>
+        <div class="about-hero-text">
+            <h2>日本の野山で育った野生の鹿を使用した<br>ダメージディアスキンレザーブランド</h2>
+            <p>
+                ARCANAは、大阪玉造の古着屋THE ENDから生まれたオリジナルブランド<br>
+                国内で害獣駆除される鹿革をメインに使用しており、この鹿革の中でもキズやスレや穴などを理由に一般的なアパレルでは使用できず廃棄されている。<br>
+                わたしたちはこの野生の生きた証が残る革に魅力や意味を感じスレ、キズを隠す事なくデザインとして落とし込んだアイテムを作っております。<br>
+                人間の都合で変わってしまった自然や動物の暮らしを変える事は出来ないが、アパレルの都合だけで廃棄される革の意味を変えるもの作りを心掛けております。<br>
+                日本国内で増えすぎて駆除され賞でられるだけの野生鹿。着てるのには無く自然が育んだマテリアルとしてものを作り社会に還元していきます。
+            </p>
+        </div>
+        <div class="about-hero-images">
+            <img src="/images/about-leather-1.jpg" alt="ARCANA leather jacket">
+            <img src="/images/about-leather-2.jpg" alt="ARCANA leather jacket">
         </div>
     </div>
 </section>
 
-{{-- Brand Story --}}
-<section class="about-story">
-    <div class="about-story-inner">
-        <div class="section-heading" style="margin-bottom:48px;">
-            <h2 style="color:rgba(255,255,255,0.45);font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;">BRAND STORY</h2>
-            <h3 style="color:#fff;font-size:22px;font-weight:700;margin-top:8px;">ARCANAが生まれた背景</h3>
-            <div class="gold-bar"></div>
-        </div>
-
-        <div class="about-story-item">
-            <div>
-                <img src="/images/banner-images/ayakashi.jpg" alt="ARCANA story" style="width:100%;">
-            </div>
-            <div class="about-story-text">
-                <h3>野生の鹿革という素材</h3>
-                <p>
-                    ARCANAが使用するのは、日本国内の害獣駆除によって得られた野生の鹿革。
-                    通常は廃棄されるような傷や銃痕がある革も、私たちにとっては唯一無二の模様。
-                    その革が持つ「生きた証」をそのままデザインとして取り込んでいます。
-                </p>
-            </div>
-        </div>
-
-        <div class="about-story-item reverse">
-            <div>
-                <img src="/images/banner-images/abyspey.jpg" alt="ARCANA craft" style="width:100%;">
-            </div>
-            <div class="about-story-text">
-                <h3>職人の手技と最高の縫製</h3>
-                <p>
-                    量産ではなく、一着一着に向き合う職人の手仕事。
-                    縫製・生地・付属品の全てにおいて妥協なく選び抜かれた素材と技術で、
-                    着込むほどに味が出る本物のレザーウェアを生み出しています。
-                </p>
-            </div>
-        </div>
-
-        <div class="about-story-item">
-            <div>
-                <img src="/images/banner-images/sunpachi.jpg" alt="ARCANA repair" style="width:100%;">
-            </div>
-            <div class="about-story-text">
-                <h3>次の世代へ受け継ぐリペア</h3>
-                <p>
-                    ARCANAのレザーウェアは、リペア・リメイクを前提に設計されています。
-                    破れても、傷んでも、また蘇らせることができる。
-                    「子どもの次の代まで着続けられる」—それが最高の嗜好品の条件です。
-                </p>
+{{-- Leather紹介 --}}
+<section class="about-leather">
+    <div class="about-leather-bg" style="background-image:url('/images/about-leather-bg.jpg');">
+        <div class="about-leather-text">
+            <h2>唯一無二のダメージディアスキン<br>ARCANA レザーを使用</h2>
+            <p>
+                ARCANAの鹿革（ディアスキン）とは、野山で生き抜いてきた鹿の生きた証が残った野生の鹿革を使用しています。<br>
+                野生のそれぞれの生き様が宿る一枚一枚違った表情で唯一無二の分厚い印象を楽しめます。
+            </p>
+            <div class="top-basemodel-link-wrap" style="padding:0;margin-top:32px;text-align:left;">
+                <a href="/leather" class="top-basemodel-link inverted">
+                    <span class="top-basemodel-link-text">詳細を見る</span>
+                    <span class="top-basemodel-link-circle"></span>
+                </a>
             </div>
         </div>
     </div>
+    <div class="about-leather-images">
+        <img src="/images/about-leather-3.jpg" alt="ARCANAレザー">
+        <img src="/images/about-leather-4.jpg" alt="ARCANAレザー">
+        <img src="/images/about-leather-5.jpg" alt="ARCANAレザー">
+    </div>
 </section>
 
-{{-- Price / Value --}}
-<section style="background:#0d0d0d;padding:80px 0;">
+{{-- Brand Purpose --}}
+<section class="about-purpose">
     <div class="container">
-        <div class="section-heading center" style="margin-bottom:48px;">
-            <h2 style="color:#fff;font-size:26px;font-weight:700;">ARCANAの価値</h2>
-            <div class="gold-bar"></div>
+        <p class="about-section-label">ブランドパーパス</p>
+        <h2 class="about-section-title">ARCANA Brand Purpose</h2>
+        <p class="about-section-desc">
+            ARCANAが提案する洋服はこれまでの洋服の概念を変えるものです。<br>
+            一般的に受け入れられない概念をデザインに変えて、唯一無二の価値を創ることを目的にするARCANAのブランドストーリーを紹介します。
+        </p>
+        <div class="top-basemodel-link-wrap" style="padding:0;margin-top:32px;text-align:left;">
+            <a href="/purpose" class="top-basemodel-link">
+                <span class="top-basemodel-link-text">詳細を見る</span>
+                <span class="top-basemodel-link-circle"></span>
+            </a>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
-            <div class="price-highlight">
-                <div class="price-num">¥100,000〜</div>
-                <div class="price-label">レザーオーダー（ベースモデル）</div>
-            </div>
-            <div class="price-highlight">
-                <div class="price-num">¥16,000〜</div>
-                <div class="price-label">レザーリペア（部位により異なる）</div>
-            </div>
-            <div class="price-highlight">
-                <div class="price-num">¥20,000〜</div>
-                <div class="price-label">リメイク・カスタム</div>
-            </div>
+    </div>
+    <div class="about-purpose-img">
+        <img src="/images/about-purpose.jpg" alt="ARCANA Brand Purpose">
+    </div>
+</section>
+
+{{-- Brand Policy --}}
+<section class="about-policy">
+    <div class="container" style="text-align:center;">
+        <p class="about-section-label">ブランドポリシー</p>
+        <h2 class="about-section-title">ARCANA Brand Policy</h2>
+        <p class="about-section-desc">ARCANAが大切にする価値観、守るべき方針を紹介します。</p>
+    </div>
+
+    <div class="about-policy-item">
+        <div class="about-policy-img">
+            <img src="/images/about-policy-1.jpg" alt="世界に1点しかないモノ創り">
+        </div>
+        <div class="about-policy-text">
+            <h3>世界に1点しかない<br>モノ創り</h3>
+            <p>
+                私たちが手がけるアイテムは、自然の痕跡をそのまま生かし、それぞれが異なる表情を持っています。<br><br>
+                一つとして同じものがない、この独自性こそがARCANAの誇りです。私たちは、素材そのものの個性を尊重し、その唯一の特徴を最大限に引き出すモノ創りを心がけています。
+            </p>
+        </div>
+    </div>
+
+    <div class="about-policy-item reverse">
+        <div class="about-policy-img">
+            <img src="/images/about-policy-2.jpg" alt="全ての工程を一気通貫で作製する">
+        </div>
+        <div class="about-policy-text">
+            <h3>全ての工程を<br>一気通貫で作製する</h3>
+            <p>
+                ARCANAは、製品のすべての工程を一気通貫で行うことで、その品質と独自性を確保しています。タンナーからの仕入れ、なめし加工、染色、後処理、縫製、そして付属品の発注に至るまで、全てのプロセスを私たち自身の手で管理し、徹底的にこだわり抜いています。<br><br>
+                この一貫したプロセスによって、素材の持つ魅力を最大限に引き出し、他にはない唯一無二のアイテムを生み出すことが可能となります。私たちは、すべての工程に責任を持つことで、ARCANAが大切にする価値観を製品に反映させています。
+            </p>
+        </div>
+    </div>
+</section>
+
+{{-- 一生サポート --}}
+<section class="about-support">
+    <div class="about-support-inner">
+        <div class="about-support-img">
+            <img src="/images/about-support.jpg" alt="一生サポート">
+        </div>
+        <div class="about-support-text">
+            <h3>一生サポート</h3>
+            <p>
+                ARCANAの製品は、一度手にした後もその価値が続くよう、一生サポートをお約束します。私たちは、製品の品質に自信を持ち、お客様が長く愛用できるよう、修理やメンテナンスを含むサポート体制を整えています。<br><br>
+                リペアをしながら、時代を超えて孫の代まで受け継がれることを目指しています。時間が経つほどに味わいを増すアイテムを、末永くご愛用いただけるよう、私たちは責任を持ってお手伝いします。
+            </p>
+        </div>
+    </div>
+</section>
+
+{{-- メディア掲載実績 --}}
+<section class="about-media">
+    <div class="container">
+        <h2 class="about-media-title">メディア掲載実績</h2>
+        <p class="about-media-desc">ARCANAは、革新的なデザインとサステイナビリティへの取り組みが評価され、さまざまなメディアで取り上げられています。</p>
+        <div class="about-media-grid">
+            <img src="/images/media-logo-1.jpg" alt="メディア掲載">
+            <img src="/images/media-logo-2.jpg" alt="メディア掲載">
+            <img src="/images/media-logo-1.jpg" alt="メディア掲載">
+            <img src="/images/media-logo-1.jpg" alt="メディア掲載">
+            <img src="/images/media-logo-2.jpg" alt="メディア掲載">
+            <img src="/images/media-logo-1.jpg" alt="メディア掲載">
         </div>
     </div>
 </section>
 
 @include('partials.service_links')
-
-{{-- CTA --}}
-<section class="section-cta">
-    <div class="container">
-        <h2>ご相談・お問い合わせ</h2>
-        <p>オーダーやリペアについて、まずはお気軽にご相談ください</p>
-        <a href="/contact" class="btn btn-outline">お問い合わせはこちら</a>
-    </div>
-</section>
 
 @endsection

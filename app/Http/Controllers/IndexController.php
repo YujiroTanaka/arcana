@@ -37,13 +37,30 @@ class IndexController extends Controller
                 $youtube = new Google_Service_YouTube($client);
                 $items = $youtube->playlistItems->listPlaylistItems('snippet', [
                     'playlistId' => 'UUSOVOu_5JyhtFkTVxMzedDA',
-                    'maxResults' => $max,
+                    'maxResults' => 50,
                 ]);
-                $snippets = [];
+                $videoIds = [];
+                $snippetMap = [];
                 foreach ($items->getItems() as $item) {
                     $snippet = $item->getSnippet();
-                    $snippet->videoId = $snippet->getResourceId()->getVideoId();
-                    $snippets[] = $snippet;
+                    $videoId = $snippet->getResourceId()->getVideoId();
+                    $snippet->videoId = $videoId;
+                    $videoIds[] = $videoId;
+                    $snippetMap[$videoId] = $snippet;
+                }
+                // videos APIでdurationを取得しShortsを除外（+1クォータ）
+                $videoDetails = $youtube->videos->listVideos('contentDetails,liveStreamingDetails', [
+                    'id' => implode(',', $videoIds),
+                ]);
+                $snippets = [];
+                foreach ($videoDetails->getItems() as $video) {
+                    $duration = new \DateInterval($video->getContentDetails()->getDuration());
+                    $seconds = $duration->h * 3600 + $duration->i * 60 + $duration->s;
+                    $isLive = $video->getLiveStreamingDetails() !== null;
+                    if ($seconds >= 120 && !$isLive && isset($snippetMap[$video->getId()])) {
+                        $snippets[] = $snippetMap[$video->getId()];
+                        if (count($snippets) >= $max) break;
+                    }
                 }
                 return $snippets;
             } catch (\Throwable $e) {

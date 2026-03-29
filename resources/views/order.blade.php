@@ -5,6 +5,8 @@
 
 @section('content')
 
+@include('partials.page_header', ['title' => 'ARCANA レザーオーダーメイド', 'current' => 'order'])
+
 {{-- Hero --}}
 <section class="order-hero">
     <div class="order-hero-bg"></div>

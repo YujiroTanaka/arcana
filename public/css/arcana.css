@@ -552,6 +552,12 @@ ul, ol { list-style: none; }
     transform: rotate(45deg) translateX(-2px);
 }
 
+/* Inverted (white on dark) */
+.top-basemodel-link.inverted { color: #fff; border-bottom-color: rgba(255,255,255,0.4); }
+.top-basemodel-link.inverted::before { background: #fff; }
+.top-basemodel-link.inverted .top-basemodel-link-circle { border-color: rgba(255,255,255,0.5); }
+.top-basemodel-link.inverted .top-basemodel-link-circle::after { border-top-color: #fff; border-right-color: #fff; }
+
 /* Photo Grid */
 .top-grid {
     display: grid;
@@ -1295,30 +1301,220 @@ ul, ol { list-style: none; }
    ABOUT PAGE
    =================================================== */
 
-.about-hero { background: var(--black); padding: 100px 0; }
-
-/* About intro 2-col layout */
-.about-intro {
+.about-hero { background: #fff; padding: 60px 0 80px; }
+.about-hero-img { text-align: center; margin-bottom: 48px; }
+.about-hero-img img { max-width: 100%; height: auto; }
+.about-hero-text { text-align: center; margin: 0 auto; }
+.about-hero-text h2 {
+    font-size: clamp(20px, 3vw, 32px);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+.about-hero-text p {
+    font-family: var(--font-gothic);
+    font-size: 14px;
+    color: #555;
+    line-height: 2.2;
+    text-align: center;
+}
+.about-hero-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
+    gap: 4px;
+    margin-top: 48px;
 }
-.about-intro-text h2 {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.5);
-    text-transform: uppercase;
-    margin-bottom: 12px;
+.about-hero-images img { width: 100%; height: auto; }
+
+/* Leather紹介 */
+.about-leather-bg {
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0 200px 15%;
 }
-.about-intro-text h3 {
-    font-size: clamp(22px, 3vw, 32px);
+.about-leather-text {
+    max-width: 700px;
+}
+.about-leather-text h2 {
+    font-size: clamp(20px, 3vw, 30px);
     font-weight: 700;
-    color: var(--white);
+    color: #fff;
+    line-height: 1.8;
     margin-bottom: 24px;
-    line-height: 1.5;
 }
-.about-intro-text p { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 2; }
+.about-leather-text p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    line-height: 2;
+    margin-bottom: 32px;
+    font-family: var(--font-gothic);
+    font-weight: 600;
+}
+.about-detail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    border-bottom: 2px solid rgba(255,255,255,0.4);
+    padding: 0 0 4px 10px;
+    transition: opacity 0.2s;
+}
+.about-detail-link:hover { opacity: 0.7; }
+.about-detail-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.about-detail-arrow::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid #333;
+    border-right: 1px solid #333;
+    transform: translateX(-1px) rotate(45deg);
+}
+.about-leather-images {
+    margin-top: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+}
+.about-leather-images img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+/* Brand Purpose */
+.about-purpose { background: #fff; padding: 80px 0; }
+.about-section-label {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+.about-section-title {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 0.05em;
+}
+.about-section-desc {
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 32px;
+}
+.about-detail-link--dark {
+    color: var(--text-dark);
+    border-bottom-color: rgba(0,0,0,0.3);
+}
+.about-detail-arrow--dark {
+    background: var(--text-dark);
+}
+.about-detail-arrow--dark::after {
+    border-top-color: #fff;
+    border-right-color: #fff;
+}
+.about-purpose-img {
+    margin-top: 60px;
+    margin-left: calc((100% - 1200px) / 2 + 40px);
+}
+.about-purpose-img img { width: 100%; height: auto; }
+
+/* Brand Policy */
+.about-policy { background: #f0eeeb; padding: 80px 0 0; }
+.about-policy-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+}
+.about-policy-item.reverse { direction: rtl; }
+.about-policy-item.reverse > * { direction: ltr; }
+.about-policy-img { overflow: hidden; }
+.about-policy-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-policy-text {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 540px;
+}
+.about-policy-item .about-policy-text { margin-left: 0; }
+.about-policy-item.reverse .about-policy-text { margin-right: 0; margin-left: auto; }
+.about-policy-text h3 {
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+.about-policy-text p {
+    font-family: var(--font-gothic);
+    font-size: 14px;
+    color: #555;
+    line-height: 2;
+    font-weight: 500;
+}
+
+/* 一生サポート */
+.about-support { background: #f0eeeb; padding: 0 0 80px; }
+.about-support-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: stretch;
+}
+.about-support-img { overflow: hidden; }
+.about-support-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-support-text {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 540px;
+}
+.about-support-text h3 {
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+}
+.about-support-text p {
+    font-family: var(--font-gothic);
+    font-size: 14px;
+    color: #555;
+    line-height: 2;
+    font-weight: 500;
+}
+
+/* メディア掲載実績 */
+.about-media { background: #fff; padding: 80px 0; }
+.about-media-title {
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+}
+.about-media-desc {
+    font-family: var(--font-gothic);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 40px;
+}
+.about-media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 540px;
+    margin: 0 auto;
+}
+.about-media-grid img { width: 100%; height: auto; display: block; }
 
 /* Shared heading pattern used in about/the-end */
 .section-heading { margin-bottom: 48px; }
@@ -1445,6 +1641,37 @@ ul, ol { list-style: none; }
     border-right: 1.5px solid #333;
     transform: translateX(-1px) rotate(45deg);
 }
+
+/* ===================================================
+   Page Header + Tabs
+   =================================================== */
+.page-header { background: #fff; padding: 60px 0 0; }
+.page-header-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+.page-header-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    border-top: 1px solid #9d9d9d;
+    padding-top: 20px;
+}
+.page-header-tab {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-gray);
+    text-decoration: none;
+    padding-bottom: 8px;
+    border-bottom: 2px solid transparent;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+}
+.page-header-tab:hover { color: var(--text-dark); }
+.page-header-tab.active { color: var(--text-dark); border-bottom-color: var(--text-dark); }
 
 /* ===================================================
    PIC UP (Blog)
@@ -1685,7 +1912,15 @@ ul, ol { list-style: none; }
     .repair-sample-grid,
     .repair-features,
     .service-links { grid-template-columns: 1fr; }
-    .about-intro { grid-template-columns: 1fr; }
+    .page-header-tabs { gap: 16px; flex-wrap: wrap; }
+    .page-header-tab { font-size: 12px; }
+    .about-leather-images { grid-template-columns: 1fr 1fr 1fr; }
+    .about-leather-bg { padding: 60px 20px; }
+    .about-policy-item,
+    .about-policy-item.reverse { grid-template-columns: 1fr; direction: ltr; }
+    .about-policy-text { padding: 24px 20px; }
+    .about-support-inner { grid-template-columns: 1fr; }
+    .about-support-text { padding: 24px 20px; }
     .about-story-item,
     .about-story-item.reverse { grid-template-columns: 1fr; direction: ltr; }
     .order-flow-grid { grid-template-columns: 1fr; }
