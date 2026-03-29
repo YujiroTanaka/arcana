@@ -18,9 +18,7 @@ Route::post('/contact', 'IndexController@contact')->name('contact.post');
 Route::post('/', 'IndexController@contact');
 
 Route::prefix('admin')->group(function () {
-    Route::get('login', function () {
-        return view('auth/login');
-    });
+    Route::get('login', 'Auth\LoginController@showLoginForm');
     Route::post('login', 'Auth\LoginController@adminLogin')->name('admin.login');
     Route::match(['get', 'post'], 'logout', 'Auth\LoginController@adminLogout')->name('admin.logout');
     Route::get('/', 'Auth\AdminController@index')->name('admin.index');

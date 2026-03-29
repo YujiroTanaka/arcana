@@ -39,6 +39,11 @@ class LoginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function showLoginForm()
+    {
+        return view('auth.login');
+    }
+
     public function adminLogin(Request $request)
     {
         $credentials = $request->validate([
