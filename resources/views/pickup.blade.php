@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'PIC UP | ARCANA THE END')
+@section('title', 'PICK UP | ARCANA THE END')
 @section('description', 'ARCANAのニュース・オーダー・リペア事例・その他の情報をお届けします。')
 
 @section('content')
@@ -9,7 +9,7 @@
     <div class="container">
 
         <div class="pickup-page-header">
-            <h1>PIC UP</h1>
+            <h1>PICK UP</h1>
         </div>
 
         {{-- Category Tabs --}}
@@ -36,7 +36,7 @@
                 </div>
                 <div class="pickup-card-body">
                     <div class="pickup-card-meta">
-                        <span>{{ $blog->created_at->format('Y.m.d') }}</span>
+                        <span>{{ ($blog->display_date ? \Carbon\Carbon::parse($blog->display_date) : $blog->created_at)->format('Y.m.d') }}</span>
                         <span class="category-badge {{ $blog->category }}">
                             @if($blog->category == 'news') NEWS
                             @elseif($blog->category == 'order_repair') オーダー・リペア事例

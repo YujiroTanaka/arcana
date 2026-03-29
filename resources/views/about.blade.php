@@ -105,6 +105,8 @@
     </div>
 </section>
 
+@include('partials.service_links')
+
 {{-- CTA --}}
 <section class="section-cta">
     <div class="container">

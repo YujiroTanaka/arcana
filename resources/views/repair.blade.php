@@ -92,7 +92,7 @@
                     @endif
                 </div>
                 <div class="pickup-card-meta">
-                    <span>{{ $sample->created_at->format('Y.m.d') }}</span>
+                    <span>{{ ($sample->display_date ? \Carbon\Carbon::parse($sample->display_date) : $sample->created_at)->format('Y.m.d') }}</span>
                     <span class="category-badge order_repair">オーダー・リペア事例</span>
                 </div>
                 <h3>{{ $sample->title }}</h3>
@@ -107,6 +107,8 @@
         @endif
     </div>
 </section>
+
+@include('partials.service_links')
 
 {{-- CTA with phone --}}
 <section class="repair-cta">

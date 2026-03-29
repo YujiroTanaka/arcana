@@ -4,11 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class BaseModel extends Model
 {
-    protected $table = 'blogs';
+    protected $table = 'base_models';
 
     protected $guarded = ['id'];
-
-    protected $dates = ['display_date'];
 }

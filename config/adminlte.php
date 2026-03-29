@@ -308,6 +308,11 @@ return [
             'icon' => 'fas fa-fw fa-tag',
         ],
         [
+            'text' => 'ベースモデル',
+            'url'  => 'admin/base-model',
+            'icon' => 'fas fa-fw fa-tshirt',
+        ],
+        [
             'text' => 'ブログ',
             'url'  => 'admin/blog',
             'icon' => 'fas fa-fw fa-pen',

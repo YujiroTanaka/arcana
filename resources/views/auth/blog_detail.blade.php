@@ -26,6 +26,12 @@
             </div>
             <!-- /.card-header -->
             <div class="card-body p-0">
+              <div class="px-3 pt-3">
+                <span class="mr-3"><strong>カテゴリ:</strong> {{ ['news' => 'NEWS', 'order_repair' => 'オーダー・リペア事例', 'others' => 'OTHERS'][$blog->category] ?? '-' }}</span>
+                <span class="mr-3"><strong>表示日:</strong> {{ $blog->display_date ? \Carbon\Carbon::parse($blog->display_date)->format('Y.m.d') : '-' }}</span>
+                <span><strong>作成日:</strong> {{ $blog->created_at->format('Y.m.d') }}</span>
+              </div>
+              <hr class="mx-3">
               <div class="mailbox-read-message">
                 {!! $blog->detail !!}
               </div>

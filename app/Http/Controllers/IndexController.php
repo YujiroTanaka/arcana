@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
 use App\Models\Contact;
 use App\Models\Item;
+use App\Models\BaseModel;
 use App\Models\Blog;
 use Google_Client;
 use Google_Service_YouTube;
@@ -53,7 +54,7 @@ class IndexController extends Controller
 
     private function getItems(): \Illuminate\Database\Eloquent\Collection
     {
-        $items = Item::orderBy('id')->get();
+        $items = BaseModel::orderBy('id')->get();
         foreach ($items as $item) {
             $item['price'] = number_format($item['price']);
         }
@@ -64,9 +65,10 @@ class IndexController extends Controller
     {
         $snippets = $this->getYoutubeSnippets(4);
         $items = $this->getItems();
-        $pickups = Blog::where('status', 1)->orderByDesc('id')->limit(3)->get();
+        $baseModels = BaseModel::orderBy('sort_order')->limit(3)->get();
+        $pickups = Blog::where('status', 1)->whereNotNull('top_position')->orderBy('top_position')->limit(3)->get();
 
-        return view('index', compact('snippets', 'items', 'pickups'));
+        return view('index', compact('snippets', 'items', 'baseModels', 'pickups'));
     }
 
     public function about()
@@ -106,13 +108,13 @@ class IndexController extends Controller
     {
         $category = $request->query('category', 'all');
 
-        $query = Blog::where('status', 1)->orderByDesc('id');
+        $query = Blog::where('status', 1)->orderByDesc('display_date');
 
         if ($category && $category !== 'all') {
             $query->where('category', $category);
         }
 
-        $blogs = $query->paginate(9)->appends(['category' => $category]);
+        $blogs = $query->paginate(12)->appends(['category' => $category]);
 
         $currentCategory = $category ?: 'all';
 
@@ -123,8 +125,8 @@ class IndexController extends Controller
     {
         $blog = Blog::where('status', 1)->findOrFail($id);
 
-        $prev = Blog::where('status', 1)->where('id', '<', $id)->orderByDesc('id')->first();
-        $next = Blog::where('status', 1)->where('id', '>', $id)->orderBy('id')->first();
+        $next = Blog::where('status', 1)->where('display_date', '<', $blog->display_date)->orderByDesc('display_date')->first();
+        $prev = Blog::where('status', 1)->where('display_date', '>', $blog->display_date)->orderBy('display_date')->first();
 
         return view('pickup_detail', compact('blog', 'prev', 'next'));
     }

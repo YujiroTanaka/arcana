@@ -10,6 +10,7 @@ use App\Models\AdminInformation;
 use App\Models\Contact;
 use App\Models\Item;
 use App\Models\Blog;
+use App\Models\BaseModel;
 
 class AdminController extends Controller
 {
@@ -194,6 +195,74 @@ class AdminController extends Controller
     }
 
     /**
+     * ベースモデル一覧
+     */
+    public function baseModel()
+    {
+        $models = BaseModel::orderBy('sort_order')->get();
+        return view('auth.base_model', compact('models'));
+    }
+
+    /**
+     * ベースモデル追加画面
+     */
+    public function baseModelRegister()
+    {
+        return view('auth.base_model_register');
+    }
+
+    /**
+     * ベースモデル追加処理
+     */
+    public function baseModelRegisterExec(Request $request)
+    {
+        $data = $request->only(['title', 'url', 'price', 'sort_order']);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('base_models', 'public');
+            $data['image'] = '/storage/' . $path;
+        }
+
+        $model = BaseModel::create($data);
+        return redirect('admin/base-model')->with('success', '登録しました');
+    }
+
+    /**
+     * ベースモデル編集画面
+     */
+    public function baseModelEdit($id)
+    {
+        $model = BaseModel::findOrFail($id);
+        return view('auth.base_model_edit', compact('model'));
+    }
+
+    /**
+     * ベースモデル編集処理
+     */
+    public function baseModelEditExec(Request $request, $id)
+    {
+        $model = BaseModel::findOrFail($id);
+        $data = $request->only(['title', 'url', 'price', 'sort_order']);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('base_models', 'public');
+            $data['image'] = '/storage/' . $path;
+        }
+
+        $model->update($data);
+        return redirect('admin/base-model/edit/' . $id)->with('success', '更新しました');
+    }
+
+    /**
+     * ベースモデル削除
+     */
+    public function baseModelDelete($id)
+    {
+        BaseModel::findOrFail($id)->delete();
+        return redirect('admin/base-model')->with('success', '削除しました');
+    }
+
+    /**
      * ブログ一覧
      *
      */
@@ -229,7 +298,11 @@ class AdminController extends Controller
      */
     public function blogEditExec(Request $request, $id)
     {
-        $data = $request->all();
+        $data = $request->except(['_token', 'thumbnail']);
+        if ($request->hasFile('thumbnail')) {
+            $path = $request->file('thumbnail')->store('blog', 'public');
+            $data['thumbnail_url'] = '/storage/' . $path;
+        }
         $blog = Blog::find($id);
         $blog->update($data);
         return redirect('admin/blog/edit/' . $id);
@@ -250,8 +323,32 @@ class AdminController extends Controller
      */
     public function blogRegisterExec(Request $request)
     {
-        $data = $request->all();
+        $data = $request->except(['_token', 'thumbnail']);
+        if ($request->hasFile('thumbnail')) {
+            $path = $request->file('thumbnail')->store('blog', 'public');
+            $data['thumbnail_url'] = '/storage/' . $path;
+        }
         $blog = Blog::create($data);
         return redirect('admin/blog/detail/' . $blog->id);
+    }
+
+    /**
+     * ブログTOP表示位置の更新
+     */
+    public function blogTopPosition(Request $request)
+    {
+        // 全てリセット
+        Blog::whereNotNull('top_position')->update(['top_position' => null]);
+
+        // 選択されたものをセット
+        if ($request->has('positions')) {
+            foreach ($request->input('positions') as $blogId => $position) {
+                if ($position) {
+                    Blog::where('id', $blogId)->update(['top_position' => $position]);
+                }
+            }
+        }
+
+        return redirect('admin/blog');
     }
 }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', $blog->title . ' | PIC UP | ARCANA THE END')
+@section('title', $blog->title . ' | PICK UP | ARCANA THE END')
 
 @section('content')
 
@@ -10,14 +10,14 @@
         {{-- Back --}}
         <div style="margin-bottom:32px;">
             <a href="/pickup" style="font-size:13px;color:#666;display:inline-flex;align-items:center;gap:6px;">
-                &larr; PIC UPに戻る
+                &larr; PICK UPに戻る
             </a>
         </div>
 
         {{-- Header --}}
         <div style="margin-bottom:40px;padding-bottom:24px;border-bottom:1px solid #eee;">
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;font-size:12px;color:#666;">
-                <span>{{ $blog->created_at->format('Y.m.d') }}</span>
+                <span>{{ ($blog->display_date ? \Carbon\Carbon::parse($blog->display_date) : $blog->created_at)->format('Y.m.d') }}</span>
                 <span class="category-badge {{ $blog->category }}">
                     @if($blog->category == 'news') NEWS
                     @elseif($blog->category == 'order_repair') オーダー・リペア事例
@@ -31,7 +31,7 @@
         {{-- Thumbnail --}}
         @if($blog->thumbnail_url)
         <div style="margin-bottom:40px;">
-            <img src="{{ $blog->thumbnail_url }}" alt="{{ $blog->title }}" style="width:100%;max-height:480px;object-fit:cover;">
+            <img src="{{ $blog->thumbnail_url }}" alt="{{ $blog->title }}" style="width:100%;">
         </div>
         @endif
 

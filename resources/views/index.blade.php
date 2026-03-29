@@ -54,19 +54,12 @@
 
     {{-- ジャケット3点 --}}
     <div class="top-jackets">
-        <a href="" target="_blank" rel="noopener" class="top-jacket-item sa sa-up sa-delay-1">
-            <img src="/images/item/item1.jpg?imformat=generic&q=90&im=Resize,width=500,type=normal" alt="ARCANA AYAKASHI">
-            <p class="top-jacket-name">ARCANA AYAKASHI</p>
+        @foreach($baseModels as $index => $model)
+        <a href="{{ $model->url ?: '#' }}" target="_blank" rel="noopener" class="top-jacket-item sa sa-up sa-delay-{{ $index + 1 }}">
+            <img src="{{ $model->image }}?imformat=generic&q=90&im=Resize,width=500,type=normal" alt="{{ $model->title }}">
+            <p class="top-jacket-name">{{ $model->title }}</p>
         </a>
-        <a href="" target="_blank" rel="noopener" class="top-jacket-item sa sa-up sa-delay-2">
-            <img src="/images/item/item2.jpg?imformat=generic&q=90&im=Resize,width=500,type=normal" alt="ARCANA FIRST TRUCKER">
-            <p class="top-jacket-name">ARCANA FIRST TRUCKER</p>
-        </a>
-        <a href="" target="_blank" rel="noopener" class="top-jacket-item sa sa-up sa-delay-3">
-            <img src="/images/item/item3.jpg?imformat=generic&q=90&im=Resize,width=500,type=normal" alt="ARCANA ABYSPEY">
-            <p class="top-jacket-name">ARCANA ABYSPEY</p>
-        </a>
-
+        @endforeach
     </div>
 
     {{-- ベースモデルを見るリンク --}}
@@ -111,40 +104,27 @@
             </div>
         </a>
 
-        {{-- 4: Designer Interview (左下ワイド) --}}
-        <a href="/pickup" class="top-grid-cell top-grid-cell--photo top-grid-interview sa sa-right">
-            <img src="/images/grid-designer.jpg" alt="Designer Interview">
+        {{-- 4-6: PICK UP（ブログ上位3件） --}}
+        @foreach($pickups as $i => $pickup)
+        @php
+            $gridClass = $i === 0 ? 'top-grid-interview' : ($i === 1 ? 'top-grid-order' : 'top-grid-repair');
+            $saClass = $i === 0 ? 'sa sa-right' : 'sa sa-up sa-delay-' . $i;
+            $categoryLabels = ['news' => 'news', 'order_repair' => 'order repair', 'others' => 'others'];
+        @endphp
+        <a href="/pickup/{{ $pickup->id }}" class="top-grid-cell top-grid-cell--photo {{ $gridClass }} {{ $saClass }}">
+            @if($pickup->thumbnail_url)
+                <img src="{{ $pickup->thumbnail_url }}" alt="{{ $pickup->title }}">
+            @else
+                <img src="/images/grid-designer.jpg" alt="{{ $pickup->title }}">
+            @endif
             <span class="top-grid-pickup-label">pickup</span>
             <div class="top-grid-cell-body">
-                <p class="top-grid-cell-en">Designer interview</p>
-                <h3 class="top-grid-cell-ja">デザイナーインタビュー</h3>
+                <p class="top-grid-cell-en">{{ $categoryLabels[$pickup->category] ?? 'NEWS' }}</p>
+                <h3 class="top-grid-cell-ja">{{ $pickup->title }}</h3>
                 <span class="top-grid-more">MORE</span>
             </div>
         </a>
-
-        {{-- 5: Order example (右下左) --}}
-        <a href="/pickup?category=order_repair" class="top-grid-cell top-grid-cell--photo top-grid-order sa sa-up sa-delay-1">
-            <img src="/images/grid-order.jpg" alt="Order example">
-            <span class="top-grid-pickup-label">pickup</span>
-            <div class="top-grid-cell-body">
-                <p class="top-grid-cell-en">Order example</p>
-                <h3 class="top-grid-cell-ja">ARCANAレザーオーダー事例</h3>
-                <p class="top-grid-cell-desc">リーバイスのファーストトラッカージャケットをベースにしたオーダージャケット</p>
-                <span class="top-grid-more">MORE</span>
-            </div>
-        </a>
-
-        {{-- 6: Repair example (右下右) --}}
-        <a href="/pickup?category=order_repair" class="top-grid-cell top-grid-cell--photo top-grid-repair sa sa-up sa-delay-2">
-            <img src="/images/grid-repair.jpg" alt="Repair example">
-            <span class="top-grid-pickup-label">pickup</span>
-            <div class="top-grid-cell-body">
-                <p class="top-grid-cell-en">Repair example</p>
-                <h3 class="top-grid-cell-ja">リペア事例</h3>
-                <p class="top-grid-cell-desc">Schottウンスター袖下マチ作成</p>
-                <span class="top-grid-more">MORE</span>
-            </div>
-        </a>
+        @endforeach
 
     </div>
 
