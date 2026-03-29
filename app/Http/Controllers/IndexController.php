@@ -35,15 +35,15 @@ class IndexController extends Controller
                 $client = new Google_Client();
                 $client->setDeveloperKey(env('GOOGLE_API_KEY'));
                 $youtube = new Google_Service_YouTube($client);
-                $items = $youtube->search->listSearch('snippet', [
-                    'channelId'  => 'UCSOVOu_5JyhtFkTVxMzedDA',
-                    'order'      => 'date',
+                $items = $youtube->playlistItems->listPlaylistItems('snippet', [
+                    'playlistId' => 'UUSOVOu_5JyhtFkTVxMzedDA',
                     'maxResults' => $max,
                 ]);
-                $ids = collect($items->getItems())->pluck('id')->all();
-                $snippets = collect($items->getItems())->pluck('snippet')->all();
-                foreach ($snippets as $key => $snippet) {
-                    $snippet->videoId = $ids[$key]->videoId;
+                $snippets = [];
+                foreach ($items->getItems() as $item) {
+                    $snippet = $item->getSnippet();
+                    $snippet->videoId = $snippet->getResourceId()->getVideoId();
+                    $snippets[] = $snippet;
                 }
                 return $snippets;
             } catch (\Throwable $e) {
