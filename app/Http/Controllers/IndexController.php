@@ -47,6 +47,7 @@ class IndexController extends Controller
                 }
                 return $snippets;
             } catch (\Throwable $e) {
+                logger()->error('YouTube API error: ' . $e->getMessage());
                 return self::fallbackVideos($max);
             }
         }) ?? self::fallbackVideos($max);
