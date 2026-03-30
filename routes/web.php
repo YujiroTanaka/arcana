@@ -3,6 +3,8 @@
 Route::get('/', 'IndexController@index')->name('index');
 
 Route::get('/about', 'IndexController@about')->name('about');
+Route::get('/leather', 'IndexController@leather')->name('leather');
+Route::get('/purpose', 'IndexController@purpose')->name('purpose');
 Route::get('/order', 'IndexController@order')->name('order');
 Route::get('/repair', 'IndexController@repair')->name('repair');
 Route::get('/the-end', 'IndexController@theEnd')->name('the-end');

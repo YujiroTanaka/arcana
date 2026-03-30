@@ -17,7 +17,8 @@
       "Bash(sips --cropToHeightWidth 180 800 --cropOffset 1800 600 xd/screen/TOP.jpg --out /tmp/basemodel_link.jpg)",
       "Bash(sips -Z 1200 /tmp/basemodel_link.jpg --out /tmp/basemodel_link2.jpg)",
       "Bash(sips --cropToHeightWidth 800 1600 --cropOffset 2000 0 xd/screen/TOP.jpg --out /tmp/grid_section.jpg)",
-      "Bash(sips -Z 1600 /tmp/grid_section.jpg --out /tmp/grid_section2.jpg)"
+      "Bash(sips -Z 1600 /tmp/grid_section.jpg --out /tmp/grid_section2.jpg)",
+      "Bash(python3:*)"
     ]
   }
 }

@@ -94,6 +94,16 @@ class IndexController extends Controller
         return view('about');
     }
 
+    public function leather()
+    {
+        return view('leather');
+    }
+
+    public function purpose()
+    {
+        return view('purpose');
+    }
+
     public function order()
     {
         $items = $this->getItems();
