@@ -11,6 +11,7 @@ use App\Models\Contact;
 use App\Models\Item;
 use App\Models\Blog;
 use App\Models\BaseModel;
+use App\Models\OrderExample;
 
 class AdminController extends Controller
 {
@@ -260,6 +261,74 @@ class AdminController extends Controller
     {
         BaseModel::findOrFail($id)->delete();
         return redirect('admin/base-model')->with('success', '削除しました');
+    }
+
+    /**
+     * オーダー事例一覧
+     */
+    public function orderExample()
+    {
+        $examples = OrderExample::orderBy('sort_order')->get();
+        return view('auth.order_example', compact('examples'));
+    }
+
+    /**
+     * オーダー事例追加画面
+     */
+    public function orderExampleRegister()
+    {
+        return view('auth.order_example_register');
+    }
+
+    /**
+     * オーダー事例追加処理
+     */
+    public function orderExampleRegisterExec(Request $request)
+    {
+        $data = $request->only(['title', 'url', 'price', 'sort_order']);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('order_examples', 'public');
+            $data['image'] = '/storage/' . $path;
+        }
+
+        OrderExample::create($data);
+        return redirect('admin/order-example')->with('success', '登録しました');
+    }
+
+    /**
+     * オーダー事例編集画面
+     */
+    public function orderExampleEdit($id)
+    {
+        $example = OrderExample::findOrFail($id);
+        return view('auth.order_example_edit', compact('example'));
+    }
+
+    /**
+     * オーダー事例編集処理
+     */
+    public function orderExampleEditExec(Request $request, $id)
+    {
+        $example = OrderExample::findOrFail($id);
+        $data = $request->only(['title', 'url', 'price', 'sort_order']);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('order_examples', 'public');
+            $data['image'] = '/storage/' . $path;
+        }
+
+        $example->update($data);
+        return redirect('admin/order-example/edit/' . $id)->with('success', '更新しました');
+    }
+
+    /**
+     * オーダー事例削除
+     */
+    public function orderExampleDelete($id)
+    {
+        OrderExample::findOrFail($id)->delete();
+        return redirect('admin/order-example')->with('success', '削除しました');
     }
 
     /**

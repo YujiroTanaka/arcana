@@ -44,6 +44,14 @@ Route::prefix('admin')->group(function () {
         Route::post('edit/{id}', 'Auth\AdminController@baseModelEditExec');
         Route::get('delete/{id}', 'Auth\AdminController@baseModelDelete');
     });
+    Route::prefix('order-example')->group(function () {
+        Route::get('/', 'Auth\AdminController@orderExample');
+        Route::get('register', 'Auth\AdminController@orderExampleRegister');
+        Route::post('register', 'Auth\AdminController@orderExampleRegisterExec');
+        Route::get('edit/{id}', 'Auth\AdminController@orderExampleEdit');
+        Route::post('edit/{id}', 'Auth\AdminController@orderExampleEditExec');
+        Route::get('delete/{id}', 'Auth\AdminController@orderExampleDelete');
+    });
     Route::prefix('blog')->group(function () {
         Route::get('/', 'Auth\AdminController@blog');
         Route::get('detail/{id}', 'Auth\AdminController@blogDetail');

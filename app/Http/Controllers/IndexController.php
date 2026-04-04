@@ -8,6 +8,7 @@ use App\Mail\ContactMail;
 use App\Models\Contact;
 use App\Models\Item;
 use App\Models\BaseModel;
+use App\Models\OrderExample;
 use App\Models\Blog;
 use Google_Client;
 use Google_Service_YouTube;
@@ -107,7 +108,9 @@ class IndexController extends Controller
     public function order()
     {
         $items = $this->getItems();
-        return view('order', compact('items'));
+        $baseModels = BaseModel::orderBy('sort_order')->get();
+        $orderExamples = OrderExample::orderBy('sort_order')->get();
+        return view('order', compact('items', 'baseModels', 'orderExamples'));
     }
 
     public function repair()

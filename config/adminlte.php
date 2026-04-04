@@ -313,6 +313,11 @@ return [
             'icon' => 'fas fa-fw fa-tshirt',
         ],
         [
+            'text' => 'オーダー事例',
+            'url'  => 'admin/order-example',
+            'icon' => 'fas fa-fw fa-images',
+        ],
+        [
             'text' => 'ブログ',
             'url'  => 'admin/blog',
             'icon' => 'fas fa-fw fa-pen',
