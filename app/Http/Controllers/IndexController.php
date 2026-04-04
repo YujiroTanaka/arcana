@@ -9,6 +9,7 @@ use App\Models\Contact;
 use App\Models\Item;
 use App\Models\BaseModel;
 use App\Models\OrderExample;
+use App\Models\RepairExample;
 use App\Models\Blog;
 use Google_Client;
 use Google_Service_YouTube;
@@ -120,7 +121,8 @@ class IndexController extends Controller
             ->orderByDesc('id')
             ->limit(3)
             ->get();
-        return view('repair', compact('samples'));
+        $repairExamples = RepairExample::orderBy('sort_order')->get();
+        return view('repair', compact('samples', 'repairExamples'));
     }
 
     public function theEnd()

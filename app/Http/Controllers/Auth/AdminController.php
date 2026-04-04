@@ -12,6 +12,7 @@ use App\Models\Item;
 use App\Models\Blog;
 use App\Models\BaseModel;
 use App\Models\OrderExample;
+use App\Models\RepairExample;
 
 class AdminController extends Controller
 {
@@ -329,6 +330,74 @@ class AdminController extends Controller
     {
         OrderExample::findOrFail($id)->delete();
         return redirect('admin/order-example')->with('success', '削除しました');
+    }
+
+    /**
+     * リペア事例一覧
+     */
+    public function repairExample()
+    {
+        $examples = RepairExample::orderBy('sort_order')->get();
+        return view('auth.repair_example', compact('examples'));
+    }
+
+    /**
+     * リペア事例追加画面
+     */
+    public function repairExampleRegister()
+    {
+        return view('auth.repair_example_register');
+    }
+
+    /**
+     * リペア事例追加処理
+     */
+    public function repairExampleRegisterExec(Request $request)
+    {
+        $data = $request->only(['title', 'url', 'price', 'sort_order']);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('repair_examples', 'public');
+            $data['image'] = '/storage/' . $path;
+        }
+
+        RepairExample::create($data);
+        return redirect('admin/repair-example')->with('success', '登録しました');
+    }
+
+    /**
+     * リペア事例編集画面
+     */
+    public function repairExampleEdit($id)
+    {
+        $example = RepairExample::findOrFail($id);
+        return view('auth.repair_example_edit', compact('example'));
+    }
+
+    /**
+     * リペア事例編集処理
+     */
+    public function repairExampleEditExec(Request $request, $id)
+    {
+        $example = RepairExample::findOrFail($id);
+        $data = $request->only(['title', 'url', 'price', 'sort_order']);
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('repair_examples', 'public');
+            $data['image'] = '/storage/' . $path;
+        }
+
+        $example->update($data);
+        return redirect('admin/repair-example/edit/' . $id)->with('success', '更新しました');
+    }
+
+    /**
+     * リペア事例削除
+     */
+    public function repairExampleDelete($id)
+    {
+        RepairExample::findOrFail($id)->delete();
+        return redirect('admin/repair-example')->with('success', '削除しました');
     }
 
     /**

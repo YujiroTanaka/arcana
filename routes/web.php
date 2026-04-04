@@ -44,6 +44,14 @@ Route::prefix('admin')->group(function () {
         Route::post('edit/{id}', 'Auth\AdminController@baseModelEditExec');
         Route::get('delete/{id}', 'Auth\AdminController@baseModelDelete');
     });
+    Route::prefix('repair-example')->group(function () {
+        Route::get('/', 'Auth\AdminController@repairExample');
+        Route::get('register', 'Auth\AdminController@repairExampleRegister');
+        Route::post('register', 'Auth\AdminController@repairExampleRegisterExec');
+        Route::get('edit/{id}', 'Auth\AdminController@repairExampleEdit');
+        Route::post('edit/{id}', 'Auth\AdminController@repairExampleEditExec');
+        Route::get('delete/{id}', 'Auth\AdminController@repairExampleDelete');
+    });
     Route::prefix('order-example')->group(function () {
         Route::get('/', 'Auth\AdminController@orderExample');
         Route::get('register', 'Auth\AdminController@orderExampleRegister');

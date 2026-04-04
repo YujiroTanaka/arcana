@@ -318,6 +318,11 @@ return [
             'icon' => 'fas fa-fw fa-images',
         ],
         [
+            'text' => 'リペア事例',
+            'url'  => 'admin/repair-example',
+            'icon' => 'fas fa-fw fa-wrench',
+        ],
+        [
             'text' => 'ブログ',
             'url'  => 'admin/blog',
             'icon' => 'fas fa-fw fa-pen',
