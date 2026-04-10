@@ -24,7 +24,7 @@
             <a href="/about" @if(Request::is('about')) class="active" @endif>ARCANAについて</a>
             <a href="/order" @if(Request::is('order')) class="active" @endif>ARCANAオーダー</a>
             <a href="/repair" @if(Request::is('repair')) class="active" @endif>レザーリペア</a>
-            <a href="/pickup" @if(Request::is('pickup*')) class="active" @endif>オーダー・リペア事例</a>
+            <a href="/pickup?category=order_repair" @if(Request::is('pickup*')) class="active" @endif>オーダー・リペア事例</a>
             <a href="/the-end" @if(Request::is('the-end')) class="active" @endif>THE ENDについて</a>
             <a href="/pickup" @if(Request::is('pickup*') && !Request::is('pickup')) class="active" @endif>pickup</a>
             <a href="/products" @if(Request::is('products')) class="active" @endif>products</a>
@@ -44,7 +44,7 @@
     <a href="/about">ARCANAについて</a>
     <a href="/order">ARCANAオーダー</a>
     <a href="/repair">レザーリペア</a>
-    <a href="/pickup">オーダー・リペア事例</a>
+    <a href="/pickup?category=order_repair">オーダー・リペア事例</a>
     <a href="/the-end">THE ENDについて</a>
     <a href="/pickup">pickup</a>
     <a href="/products">products</a>
@@ -77,14 +77,14 @@
             <a href="/about">ARCANAについて</a>
             <a href="/order">ARCANAオーダー</a>
             <a href="/repair">THE END レザーリペア</a>
-            <a href="/the-end">THE END 古着</a>
+            <a href="/used-clothing">THE END 古着</a>
         </nav>
         <div class="footer-col-nav2">
             <nav>
                 <a href="/products">products</a>
-                <a href="/pickup">オーダー事例</a>
-                <a href="/about">会社情報</a>
-                <a href="/contact">プライバシーポリシー</a>
+                <a href="/pickup?category=order_repair">オーダー事例</a>
+                <a href="/company">会社情報</a>
+                <a href="/privacy-policy">プライバシーポリシー</a>
             </nav>
             <div class="footer-social">
                 <a href="https://www.instagram.com/the_end_tamatsukuri" target="_blank" rel="noopener" title="Instagram">

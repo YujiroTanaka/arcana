@@ -30,7 +30,7 @@
             </span>
             <span class="top-hero-label-arrow"></span>
         </a>
-        <a href="/the-end" class="top-hero-label-item">
+        <a href="/used-clothing" class="top-hero-label-item">
             <span class="top-hero-label-text">
                 <span class="top-hero-label-en">THE END</span>
                 <span class="top-hero-label-ja">古着販売</span>
@@ -75,7 +75,7 @@
 <section>
     <div class="top-grid">
         {{-- 1: Purpose (左上小) --}}
-        <a href="/about" class="top-grid-cell top-grid-cell--photo top-grid-purpose sa sa-up sa-delay-1">
+        <a href="/purpose" class="top-grid-cell top-grid-cell--photo top-grid-purpose sa sa-up sa-delay-1">
             <img src="/images/grid-purpose.jpg" alt="ARCANA Purpose">
             <div class="top-grid-cell-body">
                 <p class="top-grid-cell-en">ARCANA Purpose</p>
@@ -85,7 +85,7 @@
         </a>
 
         {{-- 2: ARCANA Leather (上2番目小) --}}
-        <a href="/about" class="top-grid-cell top-grid-cell--photo top-grid-leather sa sa-up sa-delay-2">
+        <a href="/leather" class="top-grid-cell top-grid-cell--photo top-grid-leather sa sa-up sa-delay-2">
             <img src="/images/grid-leather.jpg" alt="ARCANA Leather">
             <div class="top-grid-cell-body">
                 <p class="top-grid-cell-en">ARCANA Leather</p>
@@ -149,43 +149,49 @@
 <div class="top-service-banners">
     <a href="/order" class="top-service-banner sa sa-left">
         <img src="/images/banner-order.jpg" alt="ARCANA レザーオーダーメイドサービス">
-        <div class="top-service-banner-body">
-            <p class="top-service-banner-label">ARCANA</p>
-            <div class="top-service-banner-header">
-                <p class="top-service-banner-en">leather order made Service</p>
-                <span class="top-service-banner-circle"></span>
+        <div class="top-service-banner-container">
+            <div class="top-service-banner-body">
+                <p class="top-service-banner-label">ARCANA</p>
+                <div class="top-service-banner-header">
+                    <p class="top-service-banner-en">leather order made Service</p>
+                    <span class="top-service-banner-circle"></span>
+                </div>
+                <hr class="top-service-banner-line">
+                <p class="top-service-banner-ja">レザーオーダーサービス</p>
+                <p class="top-service-banner-desc">国内の鹿革を使用したレザーアイテムをオーダーメイドにて作成。<br>お客さまのこだわりを形に変えます。</p>
             </div>
-            <hr class="top-service-banner-line">
-            <p class="top-service-banner-ja">レザーオーダーサービス</p>
-            <p class="top-service-banner-desc">国内の鹿革を使用したレザーアイテムをオーダーメイドにて作成。<br>お客さまのこだわりを形に変えます。</p>
         </div>
     </a>
 
     <a href="/repair" class="top-service-banner sa sa-right">
         <img src="/images/banner-repair.jpg" alt="THE END Leather Repair Service">
-        <div class="top-service-banner-body">
-            <p class="top-service-banner-label">THE END</p>
-            <div class="top-service-banner-header">
-                <p class="top-service-banner-en">Leather Repair Service</p>
-                <span class="top-service-banner-circle"></span>
+        <div class="top-service-banner-container">
+            <div class="top-service-banner-body">
+                <p class="top-service-banner-label">THE END</p>
+                <div class="top-service-banner-header">
+                    <p class="top-service-banner-en">Leather Repair Service</p>
+                    <span class="top-service-banner-circle"></span>
+                </div>
+                <hr class="top-service-banner-line">
+                <p class="top-service-banner-ja">レザーリペアサービス</p>
+                <p class="top-service-banner-desc">レザーアイテムを専門的にリペア/リメイクを行っております。<br>レザー特有の製法を熟知した職人が一点一点丁寧に仕上げております。</p>
             </div>
-            <hr class="top-service-banner-line">
-            <p class="top-service-banner-ja">レザーリペアサービス</p>
-            <p class="top-service-banner-desc">レザーアイテムを専門的にリペア/リメイクを行っております。<br>レザー特有の製法を熟知した職人が一点一点丁寧に仕上げております。</p>
         </div>
     </a>
 
-    <a href="/the-end" class="top-service-banner sa sa-left">
+    <a href="/used-clothing" class="top-service-banner sa sa-left">
         <img src="/images/banner-used.jpg" alt="THE END Used clothing sales">
-        <div class="top-service-banner-body">
-            <p class="top-service-banner-label">THE END</p>
-            <div class="top-service-banner-header">
-                <p class="top-service-banner-en">Used clothing sales</p>
-                <span class="top-service-banner-circle"></span>
+        <div class="top-service-banner-container">
+            <div class="top-service-banner-body">
+                <p class="top-service-banner-label">THE END</p>
+                <div class="top-service-banner-header">
+                    <p class="top-service-banner-en">Used clothing sales</p>
+                    <span class="top-service-banner-circle"></span>
+                </div>
+                <hr class="top-service-banner-line">
+                <p class="top-service-banner-ja">古着の販売</p>
+                <p class="top-service-banner-desc">国内外のこだわりのある古着を取り扱っております。<br>ヴィンテージからレギュラーまでジャンルに捉われないアイテムを取り揃えております。</p>
             </div>
-            <hr class="top-service-banner-line">
-            <p class="top-service-banner-ja">古着の販売</p>
-            <p class="top-service-banner-desc">国内外のこだわりのある古着を取り扱っております。<br>ヴィンテージからレギュラーまでジャンルに捉われないアイテムを取り揃えております。</p>
         </div>
     </a>
 </div>

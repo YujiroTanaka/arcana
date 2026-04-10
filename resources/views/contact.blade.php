@@ -8,7 +8,7 @@
 <section class="contact-page">
     <div class="container">
 
-        <div class="contact-page-header">
+        <div class="contact-page-header sa sa-fade">
             <h1>Contact</h1>
             <div style="width:40px;height:3px;background:#c4a35a;margin:12px auto 0;"></div>
         </div>
@@ -19,7 +19,7 @@
         </div>
         @endif
 
-        <div class="contact-form-wrap">
+        <div class="contact-form-wrap sa sa-up">
             <form method="POST" action="/contact" class="contact-form">
                 @csrf
                 <input type="text" name="honeypot" style="display:none;" tabindex="-1" autocomplete="off">

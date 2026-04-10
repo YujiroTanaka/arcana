@@ -8,7 +8,7 @@
 {{-- Hero --}}
 <section class="repair-hero">
     <div class="repair-hero-bg" style="background-image:url('/images/repair-1.jpg');"></div>
-    <div class="repair-hero-content">
+    <div class="repair-hero-content sa sa-fade">
         <h1>Leather Repair</h1>
         <p class="sub">
             お気に入りのレザーアイテムだから、<br>
@@ -22,7 +22,7 @@
 {{-- Problems --}}
 <section class="repair-problem">
     <div class="repair-problem-inner">
-        <h2 class="repair-problem-heading">こんなお悩みはありませんか？</h2>
+        <h2 class="repair-problem-heading sa sa-up">こんなお悩みはありませんか？</h2>
         <div class="repair-problem-body">
             <div class="repair-circles-area">
                 <div class="repair-circle repair-circle-top">
@@ -60,10 +60,10 @@
 <section class="repair-features-section">
     <div class="container" style="text-align:center;">
         <p class="repair-features-label">THE END　Leather Repair</p>
-        <h2 class="order-section-title decorated">THE END　Leather Repairだからこそ叶う、特別な体験</h2>
+        <h2 class="order-section-title decorated sa sa-up">THE END　Leather Repairだからこそ叶う、特別な体験</h2>
     </div>
     <div class="repair-features-grid">
-        <div class="repair-feature-card">
+        <div class="repair-feature-card sa sa-up sa-delay-1">
             <div class="repair-feature-card-img">
                 <img src="/images/repair-3-1.png" alt="レザーアイテムのサイズダウン">
             </div>
@@ -72,7 +72,7 @@
                 <p>ご希望のシルエットに合わせたサイズダウン可能です。<br>ステッチ跡・パーツ形状は出来るだけ元に近い状態でお仕上げさせて頂きます。</p>
             </div>
         </div>
-        <div class="repair-feature-card">
+        <div class="repair-feature-card sa sa-up sa-delay-2">
             <div class="repair-feature-card-img">
                 <img src="/images/repair-3-2.png" alt="レザーアイテムのサイズアップ">
             </div>
@@ -81,7 +81,7 @@
                 <p>ご希望のサイズ感に合わせたサイズアップ可能です。<br>ベースのレザーに近い風合いの革パーツを入れ込みサイズアップさせて頂きます。</p>
             </div>
         </div>
-        <div class="repair-feature-card">
+        <div class="repair-feature-card sa sa-up sa-delay-3">
             <div class="repair-feature-card-img">
                 <img src="/images/repair-3-3.png" alt="ファスナーやパーツのリペア">
             </div>
@@ -97,7 +97,7 @@
 <section class="repair-sample">
     <div class="container" style="text-align:center;">
         <p class="about-section-label order-label-line">リペア事例</p>
-        <h2 class="order-section-title">REPAIR SAMPLE</h2>
+        <h2 class="order-section-title sa sa-up">REPAIR SAMPLE</h2>
     </div>
     @if(count($repairExamples) > 0)
     <div class="order-swiper-wrap">
@@ -136,9 +136,9 @@
 <section class="order-cta">
     <div class="order-cta-bg" style="background-image:url('/images/cta-contact.jpg');">
         <div class="container" style="text-align:center;">
-            <h2 class="order-cta-title">Leather Repairのご相談はこちら</h2>
+            <h2 class="order-cta-title sa sa-up">Leather Repairのご相談はこちら</h2>
             <p class="order-cta-desc">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。遠方のお客様でもご安心ください。WEBからでも受け付けております。</p>
-            <a href="/contact" class="order-hero-btn" style="margin:0 auto;">レザーリペアのご相談はこちら</a>
+            <a href="/contact" class="order-hero-btn sa sa-up" style="margin:0 auto;">レザーリペアのご相談はこちら</a>
             <div class="order-cta-phone-section">
                 <p class="order-cta-phone-label"><span>お電話でのご相談はこちら</span></p>
                 <div class="order-cta-phone-box">

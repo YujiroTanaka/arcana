@@ -10,7 +10,7 @@
             <p>国内の鹿革を使用したレザーアイテムをオーダーメイドにて作成。<br>お客さまのこだわりを形に変えます。</p>
         </div>
     </a>
-    <a href="/about" class="service-link-item">
+    <a href="/purpose" class="service-link-item">
         <img src="/images/service-about.jpg" alt="ARCANAの存在意義">
         <div class="service-link-item-body">
             <div class="service-link-heading">
@@ -20,7 +20,7 @@
             <p>一般的に受け入れられない概念をデザインに変えて、唯一無二の服を創る</p>
         </div>
     </a>
-    <a href="/about" class="service-link-item">
+    <a href="/leather" class="service-link-item">
         <img src="/images/service-leather.jpg" alt="ARCANAレザー">
         <div class="service-link-item-body">
             <div class="service-link-heading">

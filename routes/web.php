@@ -8,11 +8,14 @@ Route::get('/purpose', 'IndexController@purpose')->name('purpose');
 Route::get('/order', 'IndexController@order')->name('order');
 Route::get('/repair', 'IndexController@repair')->name('repair');
 Route::get('/the-end', 'IndexController@theEnd')->name('the-end');
+Route::get('/used-clothing', 'IndexController@usedClothing')->name('used-clothing');
 Route::get('/products', 'IndexController@products')->name('products');
 
 Route::get('/pickup', 'IndexController@pickup')->name('pickup');
 Route::get('/pickup/{id}', 'IndexController@pickupDetail')->name('pickup.detail');
 
+Route::get('/privacy-policy', 'IndexController@privacyPolicy')->name('privacy-policy');
+Route::get('/company', 'IndexController@company')->name('company');
 Route::get('/contact', 'IndexController@contactPage')->name('contact');
 Route::post('/contact', 'IndexController@contact')->name('contact.post');
 

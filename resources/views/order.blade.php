@@ -10,7 +10,7 @@
 {{-- Hero --}}
 <section class="order-hero">
     <div class="order-hero-bg" style="background-image:url('/images/order-1.jpg');">
-        <div class="order-hero-content">
+        <div class="order-hero-content sa sa-fade">
             <p class="order-hero-sub">Leather Ordermade</p>
             <img src="/images/logo.png" alt="ARCANA" class="order-hero-logo">
             <p class="order-hero-text">日本の野山で育った野生の鹿革を使った<br>唯一無二のレザーオーダーメイドサービス</p>
@@ -27,23 +27,23 @@
 <section class="order-features-section">
     <div class="container">
         <p class="about-section-label" style="text-align:center;">ARCANA ORDER</p>
-        <h2 class="order-section-title decorated">ARCANAのオーダーだからこそ叶う、特別な体験</h2>
+        <h2 class="order-section-title decorated sa sa-up">ARCANAのオーダーだからこそ叶う、特別な体験</h2>
         <div class="order-features-grid">
-            <div class="order-feature-card">
+            <div class="order-feature-card sa sa-up sa-delay-1">
                 <div class="order-feature-card-img">
                     <img src="/images/order-2-1.jpg" alt="デザインオーダー">
                 </div>
                 <h4>①デザインオーダー</h4>
                 <p>ベースモデルにないデザインでもオーダー頂けます。お客さまの拘りとアイディアを詰め込んだ世界に一着のアイテムを作成させて頂きます。</p>
             </div>
-            <div class="order-feature-card">
+            <div class="order-feature-card sa sa-up sa-delay-2">
                 <div class="order-feature-card-img">
                     <img src="/images/order-2-2.jpg" alt="カラーオーダー">
                 </div>
                 <h4>②カラーオーダー</h4>
                 <p>100種類以上のカラー見本からお客さまの希望に合った色で作成頂けます。<br>他にはない拘りのカラーで自分だけの1着を作成させて頂きます。</p>
             </div>
-            <div class="order-feature-card">
+            <div class="order-feature-card sa sa-up sa-delay-3">
                 <div class="order-feature-card-img">
                     <img src="/images/order-2-3.jpg" alt="裏地/パーツオーダー">
                 </div>
@@ -56,7 +56,7 @@
 
 {{-- ARCANA leather order とは + 3つのポイント --}}
 <section class="order-about-section" style="background-image:url('/images/order-3.jpg');">
-    <div class="order-about-card">
+    <div class="order-about-card sa sa-fade">
         <h2>ARCANA LEATHER<br>ORDERとは</h2>
         <p>
             日本国内で害獣駆除された鹿革を使用し、他にはない特別なレザーアイテムをオーダーメイドで提供するサービスです。自然が刻んだ本物の傷や風合いを活かした、唯一無二の素材を使い、個性豊かなプロダクトを生み出します。<br>
@@ -65,7 +65,7 @@
         </p>
     </div>
     <div class="order-points-grid">
-        <div class="order-points-item">
+        <div class="order-points-item sa sa-up sa-delay-1">
             <div class="order-points-img">
                 <img src="/images/order-4-1.jpg" alt="唯一無二のディアスキン">
             </div>
@@ -76,7 +76,7 @@
             <p>鹿革は"レザーのカシミヤ"と呼ばれるほどポテンシャルの高いレザーで高級な素材として扱われています。その中でもARCANAの鹿革は日本の野山で育った野生の鹿を使用しております。<br>その為、生前に負った擦りキズやその治癒跡があります。 しかし、鹿革には牛や馬では表現出来ない肌に吸い付くような独特の柔らかさがあります。野生のそれぞれ異なるシボやキズを隠す事なく一枚一枚違った表情で唯一無二の"自分だけの革"としてお楽しみください。</p>
             <a href="/leather" class="order-points-more">MORE <span class="order-points-more-arrow"></span></a>
         </div>
-        <div class="order-points-item">
+        <div class="order-points-item sa sa-up sa-delay-2">
             <div class="order-points-img">
                 <img src="/images/order-4-2.jpg" alt="全ての工程を一気通貫で作製する">
             </div>
@@ -86,7 +86,7 @@
             </div>
             <p>一般的なオーダーメイドでは、受付、裁断、縫製、仕上げなど各分野で様々な人が関わり1着が作成されていますが、ARCANAでは受付から仕上げまで1人で全てを完成させる為、お客さまの顔や思い、拘りを感じ取りながら1着を作成しています。<br>故に、ARCANAレザー特有の野生の証を出来るだけお客さまの求めるデザインに落とし込み拘りや思いを細かな箇所まで作り込むことができます。</p>
         </div>
-        <div class="order-points-item">
+        <div class="order-points-item sa sa-up sa-delay-3">
             <div class="order-points-img">
                 <img src="/images/order-4-3.jpg" alt="孫の代まで受け継ぐ一生サポート">
             </div>
@@ -103,7 +103,7 @@
 <section class="order-basemodel">
     <div class="container">
         <p class="about-section-label order-label-line">アルカナレザーのオーダーベースモデル</p>
-        <h2 class="order-section-title">ARCANA LEATHER BASE MODEL</h2>
+        <h2 class="order-section-title sa sa-up">ARCANA LEATHER BASE MODEL</h2>
     </div>
     @if(count($baseModels) > 0)
     <div class="order-swiper-wrap">
@@ -140,7 +140,7 @@
 <section class="order-examples">
     <div class="container">
         <p class="about-section-label order-label-line">オーダー事例と価格</p>
-        <h2 class="order-section-title">ORDER EXAMPLES</h2>
+        <h2 class="order-section-title sa sa-up">ORDER EXAMPLES</h2>
     </div>
     @if(count($orderExamples) > 0)
     <div class="order-swiper-wrap">
@@ -168,7 +168,7 @@
         </div>
     </div>
     <div style="text-align:center;margin-top:32px;">
-        <a href="/products" class="order-viewmore-btn">VIEW MORE</a>
+        <a href="/pickup?category=order_repair" class="order-viewmore-btn">VIEW MORE</a>
     </div>
     @endif
 </section>
@@ -177,7 +177,7 @@
 <section class="order-flow-section">
     <div class="container" style="text-align:center;">
         <p class="about-section-label order-label-line">ご利用の流れ</p>
-        <h2 class="order-section-title">FLOW</h2>
+        <h2 class="order-section-title sa sa-up">FLOW</h2>
     </div>
     <div class="order-flow-grid">
         <div class="order-flow-step">
@@ -256,7 +256,7 @@
 <section class="order-voice">
     <div class="order-voice-bg" style="background-image:url('/images/order-6.jpg');">
         <div class="container">
-            <h2 class="order-section-title" style="color:#fff;margin-bottom:20px;">Customer voice</h2>
+            <h2 class="order-section-title sa sa-up" style="color:#fff;margin-bottom:20px;">Customer voice</h2>
             <p style="text-align:center;color:rgba(255,255,255,0.7);margin-bottom:72px;">お客様のリアルなお声</p>
             <div class="order-voice-grid">
                 <div class="order-voice-card">
@@ -328,9 +328,9 @@
 <section class="order-cta">
     <div class="order-cta-bg" style="background-image:url('/images/cta-contact.jpg');">
         <div class="container" style="text-align:center;">
-            <h2 class="order-cta-title">ARCANAレザーオーダーのご相談はこちら</h2>
+            <h2 class="order-cta-title sa sa-up">ARCANAレザーオーダーのご相談はこちら</h2>
             <p class="order-cta-desc">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。遠方のお客様でもご安心ください。WEBからも受け付けております。</p>
-            <a href="/contact" class="order-hero-btn" style="margin:0 auto;">ARCANAレザーオーダーのご相談はこちら</a>
+            <a href="/contact" class="order-hero-btn sa sa-up" style="margin:0 auto;">ARCANAレザーオーダーのご相談はこちら</a>
             <div class="order-cta-phone-section">
                 <p class="order-cta-phone-label"><span>お電話でのご相談はこちら</span></p>
                 <div class="order-cta-phone-box">

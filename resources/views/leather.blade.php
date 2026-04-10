@@ -8,14 +8,14 @@
 @include('partials.page_header', ['title' => 'ARCANA レザー', 'current' => 'leather'])
 
 {{-- Hero Image --}}
-<section class="leather-hero-img">
+<section class="leather-hero-img sa sa-fade">
     <img src="/images/leather-1.jpg" alt="ARCANA レザー">
 </section>
 
 {{-- Hero Text --}}
 <section class="leather-hero-text-section">
     <div class="container">
-        <h2>唯一無二のディアスキン ARCANA レザー</h2>
+        <h2 class="sa sa-up">唯一無二のディアスキン ARCANA レザー</h2>
         <p>
             鹿革はレザーのカシミヤと呼ばれるほど柔らしなやかな質感で通気性や吸湿性を兼ね揃えたがフランスの高レザーで高級な素材として親しまれています。<br>
             その中でもARCANAの鹿革は牧畜されている牛などとは違い日本の野山で育った野生の鹿を使用しております。<br>
@@ -35,20 +35,20 @@
 <section class="leather-section">
     <div class="container">
         <p class="about-section-label">ARCANAレザーの独創性</p>
-        <h2 class="about-section-title">creativity</h2>
+        <h2 class="about-section-title sa sa-up">creativity</h2>
         <p class="about-section-desc">
             希少な素材、緻密な加工、自由な色合い、そして後加工ーそのすべての工程に妥協のないこだわりを注ぎ込み、<br>
             唯一無二のARCANAレザーが誕生します。
         </p>
     </div>
-    <div class="leather-creativity-img">
+    <div class="leather-creativity-img sa sa-fade">
         <img src="/images/leather-3.jpg" alt="creativity">
     </div>
 </section>
 
 {{-- 本州鹿を使用 --}}
 <section class="about-policy" style="padding: 0 0 80px;">
-    <div class="about-policy-item reverse">
+    <div class="about-policy-item reverse sa sa-up">
         <div class="about-policy-img">
             <img src="/images/leather-4-1.jpg" alt="本州鹿を使用">
         </div>
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <div class="about-policy-item">
+    <div class="about-policy-item sa sa-up">
         <div class="about-policy-img">
             <img src="/images/leather-4-2.jpg" alt="なめし加工">
         </div>
@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <div class="about-policy-item reverse">
+    <div class="about-policy-item reverse sa sa-up">
         <div class="about-policy-img">
             <img src="/images/leather-4-3.jpg" alt="革の色">
         </div>
@@ -106,7 +106,7 @@
         </div>
     </div>
 
-    <div class="about-policy-item">
+    <div class="about-policy-item sa sa-up">
         <div class="about-policy-img">
             <img src="/images/leather-4-4.jpg" alt="後加工">
         </div>

@@ -10,7 +10,7 @@
 {{-- Hero --}}
 <section class="purpose-hero">
     <div class="purpose-hero-bg" style="background-image:url('/images/purpose-1.jpg');">
-        <div class="purpose-hero-text">
+        <div class="purpose-hero-text sa sa-fade">
             <p>一般的に受け入れられない概念を<br>デザインに変えて、唯一無二の服を創る</p>
         </div>
     </div>
@@ -19,7 +19,7 @@
 {{-- 説明文 --}}
 <section class="purpose-intro">
     <div class="container">
-        <p>
+        <p class="sa sa-up">
             一般的には綺麗な生地を使って洋服を作る。<br>
             傷があったり、破れがある生地は廃棄される。<br>
             我々が使用するのは日本国内に生息する野生の鹿革。<br>
@@ -40,7 +40,7 @@
 {{-- デザイナー紹介 --}}
 <section class="purpose-designer">
     <div class="container">
-        <div class="purpose-designer-inner">
+        <div class="purpose-designer-inner sa sa-up">
             <div class="purpose-designer-photo">
                 <img src="/images/purpose-3.jpg" alt="比嘉俊">
             </div>
@@ -58,13 +58,13 @@
 <section class="purpose-outcome">
     <div class="container">
         <p class="about-section-label">ARCANA /THE ENDの成果</p>
-        <h2 class="about-section-title">OUTCOME</h2>
+        <h2 class="about-section-title sa sa-up">OUTCOME</h2>
         <p class="about-section-desc" style="color:red;">
             ARCANAが提案する洋服はこれまでの洋服の概念を変えるものです。<br>
             一般的に受け入れられない概念をデザインに変えて、唯一無二の服を創ることを目的とするARCANAのブランドストーリーを紹介します。
         </p>
     </div>
-    <div class="purpose-outcome-img">
+    <div class="purpose-outcome-img sa sa-fade">
         <img src="/images/purpose-4.jpg" alt="OUTCOME">
     </div>
 </section>
@@ -72,7 +72,7 @@
 {{-- 実績 --}}
 <section class="about-policy purpose-stats">
     {{-- 約1000枚 --}}
-    <div class="about-policy-item">
+    <div class="about-policy-item sa sa-up">
         <div class="about-policy-img">
             <img src="/images/purpose-5-1.jpg" alt="害獣駆除革再利用">
         </div>
@@ -84,7 +84,7 @@
     </div>
 
     {{-- 約160件 --}}
-    <div class="about-policy-item reverse">
+    <div class="about-policy-item reverse sa sa-up">
         <div class="about-policy-img">
             <img src="/images/purpose-5-2.jpg" alt="ARCANAオーダー実績">
         </div>
@@ -96,7 +96,7 @@
     </div>
 
     {{-- 約200件 --}}
-    <div class="about-policy-item">
+    <div class="about-policy-item sa sa-up">
         <div class="about-policy-img">
             <img src="/images/purpose-5-3.jpg" alt="レザーリペア実績">
         </div>

@@ -127,8 +127,22 @@ class IndexController extends Controller
 
     public function theEnd()
     {
-        $snippets = $this->getYoutubeSnippets(4);
-        return view('the-end', compact('snippets'));
+        return view('the-end');
+    }
+
+    public function usedClothing()
+    {
+        return view('used-clothing');
+    }
+
+    public function privacyPolicy()
+    {
+        return view('privacy-policy');
+    }
+
+    public function company()
+    {
+        return view('company');
     }
 
     public function products()

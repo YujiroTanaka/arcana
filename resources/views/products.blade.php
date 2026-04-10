@@ -8,7 +8,7 @@
 <section class="products-page">
     <div class="container">
 
-        <div class="products-intro">
+        <div class="products-intro sa sa-fade">
             <h2>Products</h2>
             <h3>ARCANA ベースモデル</h3>
             <p>
@@ -18,7 +18,7 @@
         </div>
 
         @if(count($items) > 0)
-        <div class="products-grid">
+        <div class="products-grid sa sa-up">
             @foreach($items as $item)
             <a href="https://theend0304.base.shop/items/{{ $item->item_id }}" target="_blank" rel="noopener" class="product-card">
                 <div class="product-card-img">

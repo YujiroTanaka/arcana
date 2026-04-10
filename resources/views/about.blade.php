@@ -10,11 +10,11 @@
 {{-- Hero --}}
 <section class="about-hero">
     <div class="container">
-        <div class="about-hero-img">
+        <div class="about-hero-img sa sa-fade">
             <img src="/images/about-hero.jpg" alt="ARCANA">
         </div>
         <div class="about-hero-text">
-            <h2>日本の野山で育った野生の鹿を使用した<br>ダメージディアスキンレザーブランド</h2>
+            <h2 class="sa sa-up">日本の野山で育った野生の鹿を使用した<br>ダメージディアスキンレザーブランド</h2>
             <p>
                 ARCANAは、大阪玉造の古着屋THE ENDから生まれたオリジナルブランド<br>
                 国内で害獣駆除される鹿革をメインに使用しており、この鹿革の中でもキズやスレや穴などを理由に一般的なアパレルでは使用できず廃棄されている。<br>
@@ -33,7 +33,7 @@
 {{-- Leather紹介 --}}
 <section class="about-leather">
     <div class="about-leather-bg" style="background-image:url('/images/about-leather-bg.jpg');">
-        <div class="about-leather-text">
+        <div class="about-leather-text sa sa-fade">
             <h2>唯一無二のダメージディアスキン<br>ARCANA レザーを使用</h2>
             <p>
                 ARCANAの鹿革（ディアスキン）とは、野山で生き抜いてきた鹿の生きた証が残った野生の鹿革を使用しています。<br>
@@ -58,7 +58,7 @@
 <section class="about-purpose">
     <div class="container">
         <p class="about-section-label">ブランドパーパス</p>
-        <h2 class="about-section-title">ARCANA Brand Purpose</h2>
+        <h2 class="about-section-title sa sa-up">ARCANA Brand Purpose</h2>
         <p class="about-section-desc">
             ARCANAが提案する洋服はこれまでの洋服の概念を変えるものです。<br>
             一般的に受け入れられない概念をデザインに変えて、唯一無二の価値を創ることを目的にするARCANAのブランドストーリーを紹介します。
@@ -70,7 +70,7 @@
             </a>
         </div>
     </div>
-    <div class="about-purpose-img">
+    <div class="about-purpose-img sa sa-fade">
         <img src="/images/about-purpose.jpg" alt="ARCANA Brand Purpose">
     </div>
 </section>
@@ -79,11 +79,11 @@
 <section class="about-policy">
     <div class="container" style="text-align:center;">
         <p class="about-section-label">ブランドポリシー</p>
-        <h2 class="about-section-title">ARCANA Brand Policy</h2>
+        <h2 class="about-section-title sa sa-up">ARCANA Brand Policy</h2>
         <p class="about-section-desc">ARCANAが大切にする価値観、守るべき方針を紹介します。</p>
     </div>
 
-    <div class="about-policy-item">
+    <div class="about-policy-item sa sa-up">
         <div class="about-policy-img">
             <img src="/images/about-policy-1.jpg" alt="世界に1点しかないモノ創り">
         </div>
@@ -96,7 +96,7 @@
         </div>
     </div>
 
-    <div class="about-policy-item reverse">
+    <div class="about-policy-item reverse sa sa-up">
         <div class="about-policy-img">
             <img src="/images/about-policy-2.jpg" alt="全ての工程を一気通貫で作製する">
         </div>
@@ -112,7 +112,7 @@
 
 {{-- 一生サポート --}}
 <section class="about-support">
-    <div class="about-support-inner">
+    <div class="about-support-inner sa sa-up">
         <div class="about-support-img">
             <img src="/images/about-support.jpg" alt="一生サポート">
         </div>
@@ -129,9 +129,9 @@
 {{-- メディア掲載実績 --}}
 <section class="about-media">
     <div class="container">
-        <h2 class="about-media-title">メディア掲載実績</h2>
+        <h2 class="about-media-title sa sa-up">メディア掲載実績</h2>
         <p class="about-media-desc">ARCANAは、革新的なデザインとサステイナビリティへの取り組みが評価され、さまざまなメディアで取り上げられています。</p>
-        <div class="about-media-grid">
+        <div class="about-media-grid sa sa-fade">
             <img src="/images/media-logo-1.jpg" alt="メディア掲載">
             <img src="/images/media-logo-2.jpg" alt="メディア掲載">
             <img src="/images/media-logo-1.jpg" alt="メディア掲載">
